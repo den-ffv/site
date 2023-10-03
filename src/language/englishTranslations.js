@@ -6,6 +6,7 @@ const englishTranslations = {
     { id: 2, value: 'About', href: '/about' },
     { id: 3,  value: 'Contacts', href: '/contact' },
   ],
+  sliderTitle: "lorem text..... text",
 };
 
 export default englishTranslations
