@@ -1,28 +1,111 @@
 @import '../../variables.scss';
 
-.header-content {
-  max-width: $max_width;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+.header {
+  padding: 0 20px;
 
-  &__logo {
-  }
-
-  // .header-content__ul
-
-  &__ul {
+  &__content {
+    max-width: $max_width;
+    margin: 0 auto;
     display: flex;
-  }
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 
-  // .header-content__list
+    &__logo {}
 
-  &__list {
-   list-style: none;
-  }
+    &-ul {
+      display: flex;
+    }
 
-  // .header-content__link
+    &-link {
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+    }
 
-  &__link {
+    &-list {
+      margin-right: 40px;
+      list-style: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .header__translation-button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: Inter;
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+
+      &:first-child {
+        margin-right: 10px;
+
+        &::after {
+          content: "";
+          border-right: 1px solid #000;
+          height: 20px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .header__join {
+      display: flex;
+
+      &-button {
+        margin-left: 50px;
+        width: 160px;
+        height: 40px;
+        padding-top: 9px;
+        text-align: center;
+        border-radius: 10px;
+        background: #000;
+        border: 0;
+        cursor: pointer;
+
+        &-link {
+          color: #CFCFCF;
+          font-size: 18px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
+
+//tablet
+@media screen and (max-width: $tablet_width) {
+  .header {
+    &__content {
+      &-list {
+        margin-right: 16px;
+      }
+    }
+  
+    .header__join__button {
+      margin-left: 16px;
+      width: 130px;
+      height: 32px;
+      padding-top: 6px;
+    }
+  }
+}
+
+//mobile
+@media screen and (max-width: $mobile_width) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__content {
+      margin: 0;
+    }
+  }
+} 

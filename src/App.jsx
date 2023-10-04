@@ -19,11 +19,11 @@ function App() {
 
   const translations =
     localStorage.getItem('language') === 'ua'
-      ? ukrainianTranslations
-      : englishTranslations;
+      ? englishTranslations
+      : ukrainianTranslations;
 
   return (
-    <div className="conteiner">
+    <div className="container">
       <Header
         currentLanguage={currentLanguage}
         setCurrentLanguage={setCurrentLanguage}
