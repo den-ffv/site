@@ -10,7 +10,7 @@ const ukrainianTranslations = {
   linkButton: [
     { id: 1, value: 'Приєднатися', href: '/contact'}
   ],
-  sliderTitle: "Работаем в разных сферах!"
+  sliderTitle: "Наша діяльність"
 };
 
 export default ukrainianTranslations

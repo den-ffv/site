@@ -1,34 +1,51 @@
 /* media-queries */
-
 $desktop: 1024px;
 $tablet: 768px;
 $phone: 481px;
 
 
 /* conteiner */
-$max_width: 1100px;
+$max_width: 1660px;
 $tablet_width: 768px;
 $mobile_width: 767px;
 
+
 /* title font size */
-$h1: 35px;
-$h2: 30px;
-$h3: 20px;
-$h4: 15px;
+$h1_size: 60px;
+$h1_height: 60px;
+
+$h2_size: 45px;
+$h2_height: 50px;
+
+$h3_size: 36px;
+$h3_height: 40px;
+
 
 /* text font size */
+$subtitle_size: 24px;
+$subtitle_height: 30px;
+
+$basic_text_size: 16px;
+$basic_text_height: 25px;
+
 
 /* seconds of animations */
 $transition: 0.6s;
 
-/* backgraund color */
 
-/* font color */
+/* color */
+$basic-color_500: #FF0000;
+$basic-color_600: #E60808;
+
+$secondary_500: #BCB7B7;
+$secondary_600: #888888;
+
+$dark_color: #090909;
+$light_color: #FFFFFF;
 
 
 /* border  */ 
-
-$border-radius: 20px;
+$border_radius: 20px;
 
 
 /* footer */

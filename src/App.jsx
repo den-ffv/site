@@ -11,24 +11,28 @@ import Sliders from './components/Slider/Slider';
 import Title from './components/Title/Title';
 
 function App() {
-  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('language'));
+  const [currentLanguage, setCurrentLanguage] = useState(
+    localStorage.getItem('language'),
+  );
 
-  window.localStorage.setItem('language', currentLanguage == null ? "ua" : currentLanguage );
-  useEffect(() => {
-  }, [currentLanguage]);
+  window.localStorage.setItem(
+    'language',
+    currentLanguage == null ? 'ua' : currentLanguage,
+  );
+  useEffect(() => {}, [currentLanguage]);
 
   const translations =
     localStorage.getItem('language') === 'ua'
-      ? englishTranslations
-      : ukrainianTranslations;
+      ? ukrainianTranslations
+      : englishTranslations;
 
-
-
-      const images = [
-        'https://www.fubiz.net/wp-content/uploads/2021/05/GDT-nature-wildlife-photography-awards-nature-studio-petapixel-800x533.jpg',
-        'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341068/EducationHub/photos/ocean-waves.jpg',
-        'https://cdnp.flypgs.com/files/Sehirler-long-tail/Kyiv/kyiv-bag_ms_zl_k-anit.jpg',
-      ];
+  const images = [
+    '/image-1.svg',
+    '/image-2.svg',
+    '/image-3.svg',
+    '/image-2.svg',
+    '/image-3.svg',
+  ];
 
   return (
     <div className="container">
@@ -42,8 +46,8 @@ function App() {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima eum
         unde officiis nulla eos voluptatum, odit laudantium, atque nam iure
         aliquid quia autem delectus? Quo dicta vero tempora non adipisci!
-        <Title titleText={translations.sliderTitle}/>
-        <Sliders images={images}/>
+        <Title titleText={translations.sliderTitle} />
+        <Sliders images={images} />
       </main>
 
       <Footer />

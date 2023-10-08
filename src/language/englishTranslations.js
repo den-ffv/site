@@ -10,7 +10,7 @@ const englishTranslations = {
   linkButton: [
     { id: 1, value: 'Join', href: '/contact'},
   ],
-  sliderTitle: "lorem text..... text",
+  sliderTitle: "Our activity",
 };
 
 export default englishTranslations

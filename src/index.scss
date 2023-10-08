@@ -12,7 +12,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0; /* Добавьте цвет фона по вашему выбору */
 }
 .content-wrapper {
  
@@ -24,6 +23,7 @@ body {
   flex: 1;
   max-width: $max_width;
   margin: 0 auto;
+  padding: 0px 10px 0px 10px;
 }
 .footer {
   background-color: #f0f0f0;
