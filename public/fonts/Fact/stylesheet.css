@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Fact';
+    src: url('Fact-Medium.eot');
+    src: local('Fact Medium'), local('Fact-Medium'),
+        url('Fact-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Fact-Medium.woff2') format('woff2'),
+        url('Fact-Medium.woff') format('woff'),
+        url('Fact-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fact';
+    src: url('Fact-Black.eot');
+    src: local('Fact Black'), local('Fact-Black'),
+        url('Fact-Black.eot?#iefix') format('embedded-opentype'),
+        url('Fact-Black.woff2') format('woff2'),
+        url('Fact-Black.woff') format('woff'),
+        url('Fact-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Fact Extra';
+    src: url('Fact-ExtraBold.eot');
+    src: local('Fact Extra Bold'), local('Fact-ExtraBold'),
+        url('Fact-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Fact-ExtraBold.woff2') format('woff2'),
+        url('Fact-ExtraBold.woff') format('woff'),
+        url('Fact-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Fact';
+    src: url('Fact-Bold.eot');
+    src: local('Fact Bold'), local('Fact-Bold'),
+        url('Fact-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Fact-Bold.woff2') format('woff2'),
+        url('Fact-Bold.woff') format('woff'),
+        url('Fact-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fact';
+    src: url('Fact-Regular.eot');
+    src: local('Fact'), local('Fact-Regular'),
+        url('Fact-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Fact-Regular.woff2') format('woff2'),
+        url('Fact-Regular.woff') format('woff'),
+        url('Fact-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
