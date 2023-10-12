@@ -20,7 +20,7 @@
 
   .footer__content-link {
     text-decoration: none;
-    color: $black-1;
+    color: $dark_color;
     text-align: center;
     font-family: Fact;
     font-size: 16px;
@@ -41,7 +41,7 @@
       letter-spacing: 0.05em;
       font-size: 20px;
       text-decoration: none;
-      color: $black-1;
+      color: $dark_color;
       font-weight: bold;
     }
   }
@@ -72,10 +72,10 @@
   letter-spacing: 0.05em;
   font-size: 16px;
   text-decoration: none;
-  color: $black-1;
+  color: $dark_color;
 
   & > a {
-    color: $black-1;
+    color: $dark_color;
     text-decoration: none;
 
     &:hover {
@@ -94,7 +94,7 @@
   position: relative;
 
   & > a {
-    color: $black-1;
+    color: $dark_color;
     text-decoration: none;
 
     &:hover {
@@ -113,7 +113,7 @@
   letter-spacing: 0.05em;
   font-size: 12px;
   text-decoration: none;
-  color: $black-1;
+  color: $dark_color;
   font-weight: bold;
 }
 
@@ -162,7 +162,7 @@
     font-family: Fact;
     font-size: 12px;
     letter-spacing: 0.05em;
-    color: $black-1;
+    color: $dark_color;
   }
 
   .footer__wrapper-content {

@@ -55,7 +55,7 @@ function Sliders({ images }) {
   };
 
   return (
-    <div className="slider">
+    <div className="slider" data-aos="fade-up" data-aos-duration="2000">
       <div className="arrow arrow-left" onClick={moveLeft}>
         <p className="fi-arrow-left">
           <img src={arrowIcon} alt="arrow-icon" />
