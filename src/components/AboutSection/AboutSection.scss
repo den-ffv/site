@@ -1,0 +1,94 @@
+@import '../../variables.scss';
+
+.about-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px 0px 10px 0px;
+  margin: 70px 0px 50px 0px;
+  &__text-content {
+    max-width: 630px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+  }
+  &__icon {
+    margin: 0px 40px 0px 0px;
+  }
+  &__text {
+    position: relative;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 40px 0px 40px 0px;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0px auto;
+      display: block;
+      width: 390px;
+      height: 4px;
+      border-radius: 10px;
+      background: $basic-color_500;
+    }
+  }
+  &__foto-container {
+    position: relative;
+    width: 500px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 1151px) {
+}
+@media (max-width: 640px) {
+  .about-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 0px 50px 0px;
+    &__text-content {
+      max-width: 630px;
+      display: flex;
+      align-items: center;
+      padding: 0px;
+    }
+    &__icon {
+      margin: 0px 10px 0px 0px;
+    }
+    &__text {
+      position: relative;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 125%;
+      padding: 40px 0px 40px 0px;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 10px;
+        background: $basic-color_500;
+      }
+    }
+    &__foto-container {
+      position: relative;
+      width: 500px;
+      height: 450px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

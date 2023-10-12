@@ -12,7 +12,14 @@ const ukrainianTranslations = {
   linkButton: [{ id: 1, value: 'Приєднатися', href: '/contact' }],
 
   // slider
-  sliderTitle: 'Работаем в разных сферах!',
+  sliderTitle: "Наша діяльність",
+
+  // InitialBlockSection
+  initialTitle: "Майбутнє країни в наших руках!",
+  initialText:"Ми - молодіжна організація партії 'УДАР'. Наша команда об'єднує енергійних, креативних молодих людей, які хочуть зробити свій внесок у побудову кращого майбутнього для України.",
+  initialButtonText:"Дізнатися більше",
+
+
 
   // LeaderParty section
   leaderPartyTitle: [{ id: 1, value: 'Лідер молодіжної партії «УДАР»' }],
@@ -63,9 +70,11 @@ const ukrainianTranslations = {
     { id: 1, value: 'Контакти', href: '#' },
     { id: 2, value: 'Політика конфіденційності ', href: '#' },
   ],
+ 
   linkItemsFooterContactMobile: [{ id: 1, value: 'Наш номер' }],
   linkItemsFooterContactEmail: [{ id: 1, value: 'Наша пошта' }],
-  sliderTitle: "Наша діяльність"
+ 
+
 };
 
 export default ukrainianTranslations;

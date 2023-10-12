@@ -12,7 +12,13 @@ const englishTranslations = {
   linkButton: [{ id: 1, value: 'Join', href: '/contact' }],
 
   // slider
-  sliderTitle: 'lorem text..... text',
+  sliderTitle: "Our activity",
+
+
+  // InitialBlockSection
+  initialTitle: "The future of the country is in our hands!",
+  initialText:"We are the youth organization of the UDAR party. Our team unites energetic, creative young people who want to contribute to building a better future for Ukraine.",
+  initialButtonText:"Learn more",
 
   // LeaderParty section
   leaderPartyTitle: [{ id: 1, value: 'Leader of the youth party «KICK»' }],
@@ -62,10 +68,12 @@ const englishTranslations = {
     { id: 1, value: 'Contact', href: '#' },
     { id: 2, value: 'Privacy Policy', href: '#' },
   ],
+ 
   copyRight: [{ id: 1, value: 'Copyright © 2023 MDAR' }],
   linkItemsFooterContactMobile: [{ id: 1, value: 'Our number' }],
   linkItemsFooterContactEmail: [{ id: 1, value: 'Our mail' }],
-  sliderTitle: "Our activity",
+ 
+
 };
 
 export default englishTranslations;
