@@ -3,8 +3,8 @@ $desktop: 1024px;
 $tablet: 768px;
 $phone: 481px;
 
-
 /* conteiner */
+$labtop_width: 1024px;
 $max_width: 1660px;
 $tablet_width: 768px;
 $mobile_width: 767px;
@@ -50,3 +50,18 @@ $border_radius: 20px;
 
 /* footer */
 $heiggt_footer: 100px;
+
+/* color */
+
+// black color
+$black-1: var(--Black, #090909);
+
+// red color
+$red-1: var(--red-red-500, #f00);
+$red-2: #e60808;
+
+// white color
+$white-1: #fff;
+
+// grey color
+$grey-1: #888;

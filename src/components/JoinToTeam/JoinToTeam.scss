@@ -1,0 +1,136 @@
+@import '../../variables.scss';
+.joinTeam {
+  padding: 130px 0 250px 0;
+}
+
+.joinTeam__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.joinTeam__wrapper-title {
+  max-width: 880px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.joinTeam__image {
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.joinTeam__content {
+  position: relative;
+
+  &-subtitle {
+    position: absolute;
+    width: 600px;
+    text-align: center;
+    top: -172px;
+    transform: rotate(23.053deg);
+    right: 125px;
+    color: $red-1;
+    font-family: Segoe Script;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+}
+
+.joinTeam__join {
+  display: flex;
+
+  &-button-link {
+    width: 320px;
+    height: 100px;
+    padding-top: 28px;
+    text-align: center;
+    background: transparent;
+    border: 2px solid $red-1;
+    cursor: pointer;
+    color: $red-1;
+    font-family: Fact;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+      background: $red-1;
+      color: $white-1;
+      transition: 0.4s;
+    }
+
+    &:active {
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+      background: $red-2;
+      color: $white-1;
+    }
+
+    &:disabled {
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+      background: $red-2;
+      color: $grey-1;
+    }
+  }
+}
+
+//tablet
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .joinTeam {
+    padding: 70px 0 100px 0;
+  }
+
+  .joinTeam__wrapper-title {
+    margin-bottom: 50px;
+    width: 480px;
+  }
+
+  .joinTeam__image {
+    height: 400px;
+    margin-bottom: 30px;
+  }
+
+  .joinTeam__content-subtitle {
+    width: 335px;
+    top: -227px;
+    transform: rotate(27.053deg);
+    right: 124px;
+    font-size: 22px;
+  }
+
+  .joinTeam__join-button-link {
+    padding-top: 20px;
+    font-size: 24px;
+    height: 80px;
+    width: 250px;
+  }
+}
+
+//mobile
+@media screen and (max-width: $mobile_width) {
+  .joinTeam {
+    padding: 50px 0 60px 0;
+  }
+
+  .joinTeam__wrapper-title {
+    max-width: 300px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .joinTeam__image {
+    width: 96%;
+    margin-bottom: 40px;
+  }
+
+  .joinTeam__join-button-link {
+    width: 310px;
+    height: 70px;
+    padding-top: 17px;
+    font-size: 24px;
+  }
+}

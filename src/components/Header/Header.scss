@@ -1,7 +1,19 @@
 @import '../../variables.scss';
 
 .header {
-  padding: 0 20px;
+  background: linear-gradient(180deg, #fff 0%, #fff 56.77%);
+  box-shadow: 0 3px 40px 0px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+
+  &__logo img {
+    width: 70px;
+    margin-right: 40px;
+  }
+
+  &__wapper {
+    display: flex;
+    align-items: center;
+  }
 
   &__content {
     max-width: $max_width;
@@ -9,9 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-
-    &__logo {}
+    padding: 10px 0;
 
     &-ul {
       display: flex;
@@ -19,37 +29,73 @@
 
     &-link {
       text-decoration: none;
-      color: #000;
-      font-size: 16px;
+      position: relative;
+      font-family: Fact;
+      font-size: 18px;
       font-weight: bold;
+      line-height: 30px;
+      color: $black-1;
+
+      &:hover {
+        color: $red-1;
+        transition: 0.3s;
+      }
+
+      &::before {
+        content: '';
+        bottom: -2px;
+        right: 0;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: $red-1;
+        transition: 0.2s;
+      }
+
+      &:hover:before {
+        width: 100%;
+        left: 0;
+      }
     }
 
     &-list {
-      margin-right: 40px;
+      margin-right: 18px;
       list-style: none;
+      padding-right: 18px;
+      border-right: 1px solid #000;
 
       &:last-child {
         margin-right: 0;
       }
     }
 
+    .header__join-button-link:hover {
+      animation: none; /* Отключаем анимацию при наведении */
+    }
+
     .header__translation-button {
       background: transparent;
+      position: relative;
       border: none;
       cursor: pointer;
-      font-family: Inter;
-      color: #000;
+      font-family: Fact;
       font-size: 18px;
-      font-weight: 600;
+      font-weight: bold;
+      line-height: 30px;
+
+      &:hover {
+        color: $red-1;
+        transition: 0.4s;
+      }
 
       &:first-child {
-        margin-right: 10px;
+        margin-right: 4px;
 
         &::after {
-          content: "";
+          content: '';
           border-right: 1px solid #000;
           height: 20px;
-          margin-left: 10px;
+          margin-left: 4px;
         }
       }
     }
@@ -57,22 +103,39 @@
     .header__join {
       display: flex;
 
-      &-button {
+      &-button-link {
         margin-left: 50px;
         width: 160px;
         height: 40px;
-        padding-top: 9px;
+        padding-top: 2px;
         text-align: center;
-        border-radius: 10px;
-        background: #000;
-        border: 0;
+        background: transparent;
+        border: 2px solid $red-1;
         cursor: pointer;
+        color: $red-1;
+        font-family: Fact;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 30px;
+        text-decoration: none;
 
-        &-link {
-          color: #CFCFCF;
-          font-size: 18px;
-          font-weight: 600;
-          text-decoration: none;
+        &:hover {
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          background: $red-1;
+          color: $white-1;
+          transition: 0.4s;
+        }
+
+        &:active {
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          background: $red-2;
+          color: $white-1;
+        }
+
+        &:disabled {
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          background: $red-2;
+          color: $grey-1;
         }
       }
     }
@@ -80,32 +143,23 @@
 }
 
 //tablet
-@media screen and (max-width: $tablet_width) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .header {
     &__content {
       &-list {
-        margin-right: 16px;
+        margin-right: 8px;
       }
     }
-  
-    .header__join__button {
+
+    .header__content-list {
+      padding-right: 8px;
+    }
+
+    .header__join-button-link {
       margin-left: 16px;
       width: 130px;
       height: 32px;
-      padding-top: 6px;
+      padding-top: 0;
     }
   }
 }
-
-//mobile
-@media screen and (max-width: $mobile_width) {
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__content {
-      margin: 0;
-    }
-  }
-} 

@@ -1,0 +1,148 @@
+@import '../../variables.scss';
+
+.leaderParty {
+  margin: 100px 0 50px 0;
+}
+
+.leaderParty__wrapper-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  & > h2 {
+    margin-bottom: 80px;
+  }
+}
+
+.leaderParty__content {
+  display: flex;
+}
+
+.leaderParty__content-img {
+  width: 400px;
+  height: 520px;
+  margin-right: 80px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.leaderParty__text {
+  margin-bottom: 35px;
+}
+
+.leaderParty__content-title {
+  text-align: center;
+  color: $black-1;
+  font-family: Fact;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  border-bottom: 3px solid $red-1;
+  padding-bottom: 3px;
+  max-width: 250px;
+}
+
+.leaderParty__content-subtitle {
+  color: $red-1;
+  font-family: Segoe Script;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  max-width: 450px;
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+}
+
+.leaderParty__content-social {
+  display: flex;
+  align-items: center;
+}
+
+.leaderParty__social-link {
+  margin-right: 25px;
+
+  & img {
+    width: 88px;
+    height: 88px;
+    transition: 0.5s;
+  }
+
+  & img:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.leaderParty__social-text {
+  color: $black-1;
+  font-family: Fact;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 45px;
+}
+
+//tablet
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .leaderParty__wrapper-title > h2 {
+    margin-bottom: 40px;
+  }
+
+  .leaderParty__content-subtitle {
+    max-width: 350px;
+  }
+
+  .leaderParty__content-img {
+    margin-right: 40px;
+    width: 306px;
+    height: 420px;
+  }
+
+  .leaderParty__social-link img {
+    width: 66px;
+    height: 66px;
+  }
+
+  .leaderParty__social-text {
+    font-size: 32px;
+  }
+}
+
+//mobile
+@media screen and (max-width: $mobile_width) {
+  .leaderParty__wrapper-title > h2 {
+    margin-bottom: 20px;
+  }
+
+  .leaderParty__content-subtitle {
+    max-width: 300px;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .leaderParty__content-img {
+    margin-right: 0;
+    width: 306px;
+    height: 365px;
+    margin-bottom: 30px;
+  }
+
+  .leaderParty__social-link {
+    margin-right: 25px;
+
+    & img {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .leaderParty__social-text {
+    font-size: 20px;
+  }
+
+  .leaderParty__content {
+    flex-direction: column;
+  }
+}

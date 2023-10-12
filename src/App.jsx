@@ -3,12 +3,19 @@ import React, { useEffect, useState } from 'react';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 
-import './components/Footer/Footer.scss';
+// Components
 
 import ukrainianTranslations from './language/ukrainianTranslations';
 import englishTranslations from './language/englishTranslations';
 import Sliders from './components/Slider/Slider';
 import Title from './components/Title/Title';
+import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
+
+// Section
+
+import JoinToTeam from './components/JoinToTeam/JoinToTeam';
+import SocialMedia from './components/SocialMedia/SocialMedia';
+import LeaderParty from './components/LeaderParty/LeaderParty';
 
 function App() {
   const [currentLanguage, setCurrentLanguage] = useState(
@@ -36,6 +43,7 @@ function App() {
 
   return (
     <div className="container">
+      <ScrollToTopButton />
       <Header
         currentLanguage={currentLanguage}
         setCurrentLanguage={setCurrentLanguage}
@@ -48,9 +56,11 @@ function App() {
         aliquid quia autem delectus? Quo dicta vero tempora non adipisci!
         <Title titleText={translations.sliderTitle} />
         <Sliders images={images} />
+        <LeaderParty translations={translations} />
+        <SocialMedia translations={translations} />
+        <JoinToTeam translations={translations} />
+        <Footer translations={translations} />
       </main>
-
-      <Footer />
     </div>
   );
 }
