@@ -17,7 +17,7 @@
     color: #fff;
     background: #393939;
     cursor: pointer;
-    z-index: 10;
+
     &:focus {
       outline: none;
     }
@@ -74,7 +74,7 @@
 
 @media (max-width: 930px) {
   .slider {
-    margin: 40px 0px;
+    margin: 40px 10px;
     &__content {
       position: relative;
     }
@@ -87,7 +87,6 @@
       color: #fff;
       background: #393939;
       cursor: pointer;
-      z-index: 10;
       &:focus {
         outline: none;
       }
