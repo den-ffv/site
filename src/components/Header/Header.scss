@@ -5,6 +5,10 @@
   box-shadow: 0 3px 40px 0px rgba(0, 0, 0, 0.15);
   padding: 10px;
 
+  &__translation-button.selected {
+    color: $basic-color_500;
+  }
+
   &__logo img {
     width: 70px;
     margin-right: 40px;

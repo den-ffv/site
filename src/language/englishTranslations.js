@@ -4,24 +4,46 @@ const englishTranslations = {
 
   // header
   linkItems: [
-    { id: 1, value: 'News', href: '/home' },
-    { id: 2, value: 'Team', href: '/about' },
-    { id: 3, value: 'About party', href: '/contact' },
+    { id: 1, value: 'About us', href: '/home' },
+    { id: 2, value: 'Team', href: '/Team' },
+    { id: 3, value: 'About party', href: 'https://udar.party/' },
     { id: 4, value: 'Contact', href: '/contact' },
   ],
   linkButton: [{ id: 1, value: 'Join', href: '/contact' }],
 
+  // About Section
+  aboutText: [
+    {
+      value:
+        'We believe that young people are the future of the country, and it is through joint efforts, creativity and perseverance that we can achieve positive change.',
+    },
+  ],
   // slider
-  sliderTitle: "Our activity",
-
+  sliderTitle: 'Our activity',
 
   // InitialBlockSection
-  initialTitle: "The future of the country is in our hands!",
-  initialText:"We are the youth organization of the UDAR party. Our team unites energetic, creative young people who want to contribute to building a better future for Ukraine.",
-  initialButtonText:"Learn more",
+  initialTitle: [
+    {
+      id: 1,
+      value: 'The future of the country is in our hands!',
+    },
+  ],
+  initialText: [
+    {
+      id: 1,
+      value:
+        'We are the youth organization of the "UDAR" party. Our team unites energetic, creative young people who want to contribute to building a better future for Ukraine.',
+    },
+  ],
+  initialButtonText: [
+    {
+      id: 1,
+      value: 'Learn more',
+    },
+  ],
 
   // LeaderParty section
-  leaderPartyTitle: [{ id: 1, value: 'Leader of the youth party «KICK»' }],
+  leaderPartyTitle: [{ id: 1, value: 'Leader of the youth party «UDAR»' }],
   leaderPartyName: [{ id: 1, value: 'Damir Rakhmatullin' }],
   leaderPartyСitation: [
     {
@@ -45,8 +67,7 @@ const englishTranslations = {
   joinTeamTitle: [
     {
       id: 1,
-      value:
-        'Together we are stronger, together we will win! Together we are stronger, together we will win!',
+      value: 'Together we are stronger, together we will win!',
     },
   ],
 
@@ -68,12 +89,10 @@ const englishTranslations = {
     { id: 1, value: 'Contact', href: '#' },
     { id: 2, value: 'Privacy Policy', href: '#' },
   ],
- 
+
   copyRight: [{ id: 1, value: 'Copyright © 2023 MDAR' }],
   linkItemsFooterContactMobile: [{ id: 1, value: 'Our number' }],
   linkItemsFooterContactEmail: [{ id: 1, value: 'Our mail' }],
- 
-
 };
 
 export default englishTranslations;

@@ -40,13 +40,17 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
         </div>
         <div className="header__join" data-aos="zoom-in">
           <button
-            className="header__translation-button"
+            className={`header__translation-button ${
+              currentLanguage === 'ua' ? 'selected' : ''
+            }`}
             onClick={() => setCurrentLanguage('ua')}
           >
             Укр
           </button>
           <button
-            className="header__translation-button"
+            className={`header__translation-button ${
+              currentLanguage === 'en' ? 'selected' : ''
+            }`}
             onClick={() => setCurrentLanguage('en')}
           >
             Eng

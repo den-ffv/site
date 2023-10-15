@@ -1,10 +1,10 @@
-@import "../../../variables.scss";
+@import '../../../variables.scss';
 
 .big-foto-card {
   position: relative;
   width: 435px;
   height: 560px;
-  transform: rotate(-7.076deg);
+  transform: rotate(-7.076deg) !important;
   background: #efeeee;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   transition: $transition;
@@ -25,13 +25,13 @@
     right: 0;
     bottom: 70px;
   }
-  &:hover{
+  &:hover {
     transition: $transition;
     transform: rotate(-4.076deg) scale(0.9);
   }
 }
 
-@media(max-width: 650px){
+@media (max-width: 650px) {
   .big-foto-card {
     position: relative;
     width: 241px;
@@ -43,7 +43,8 @@
     &__content {
       width: 210px;
       margin: 15px auto;
-      img{
+
+      img {
         width: 100%;
       }
     }
@@ -60,7 +61,7 @@
       right: 0;
       bottom: 30px;
     }
-    &:hover{
+    &:hover {
       transition: $transition;
       transform: rotate(-4.076deg) scale(0.9);
     }

@@ -59,7 +59,7 @@ function App() {
         setCurrentLanguage={setCurrentLanguage}
         translations={translations}
       />
-    
+
       <div className="main">
         <div className="main__container">
           <InitialBlockSection translations={translations} />
@@ -75,12 +75,12 @@ function App() {
           <Sliders images={images} />
         </div>
       </div>
-        <div className="main__container">
-          <LeaderParty translations={translations} />
-          <SocialMedia translations={translations} />
-          <JoinToTeam translations={translations} />
-          <Footer translations={translations} />
-        </div>
+      <div className="main__container">
+        <LeaderParty translations={translations} />
+        <SocialMedia translations={translations} />
+        <JoinToTeam translations={translations} />
+        <Footer translations={translations} />
+      </div>
     </main>
   );
 }

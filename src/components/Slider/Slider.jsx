@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
-
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-
+import React, { useState, useEffect } from 'react';
+import { TransitionGroup } from 'react-transition-group';
 import './Slider.scss';
 import SliderItem from '../SliderItem/SliderItem';
-
 import arrowIcon from '/arrow.svg';
 
 function Sliders({ images }) {
   const [active, setActive] = useState(0);
   const [direction, setDirection] = useState('');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      moveRight();
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [active]);
 
   const generateItems = () => {
     const renderedItems = [];
@@ -27,6 +32,7 @@ function Sliders({ images }) {
     }
     return renderedItems;
   };
+
   const moveLeft = () => {
     const newActive = active - 1 < 0 ? images.length - 1 : active - 1;
     setActive(newActive);

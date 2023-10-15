@@ -31,7 +31,7 @@ function LeaderParty({ translations }) {
             </div>
             <div
               className="leaderParty__content-wrapper"
-              data-aos="fade-up"
+              data-aos="fade-left"
               data-aos-duration="2000"
             >
               <div className="leaderParty__text">

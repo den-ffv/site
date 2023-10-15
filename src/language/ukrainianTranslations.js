@@ -4,22 +4,44 @@ const ukrainianTranslations = {
 
   // header
   linkItems: [
-    { id: 1, value: 'Новини', href: '/home' },
-    { id: 2, value: 'Команда', href: '/about' },
-    { id: 3, value: 'Про партію', href: '/contact' },
+    { id: 1, value: 'Про нас', href: '/home' },
+    { id: 2, value: 'Команда', href: '/Team' },
+    { id: 3, value: 'Про партію', href: 'https://udar.party/' },
     { id: 4, value: 'Контакти', href: '/contact' },
   ],
   linkButton: [{ id: 1, value: 'Приєднатися', href: '/contact' }],
 
+  // About
+  aboutText: [
+    {
+      value:
+        'Ми впевнені, що молодь - це майбутнє країни, і саме через спільні зусилля, креативність та наполегливість ми можемо досягти позитивних змін.',
+    },
+  ],
+
   // slider
-  sliderTitle: "Наша діяльність",
+  sliderTitle: 'Наша діяльність',
 
   // InitialBlockSection
-  initialTitle: "Майбутнє країни в наших руках!",
-  initialText:"Ми - молодіжна організація партії 'УДАР'. Наша команда об'єднує енергійних, креативних молодих людей, які хочуть зробити свій внесок у побудову кращого майбутнього для України.",
-  initialButtonText:"Дізнатися більше",
-
-
+  initialTitle: [
+    {
+      id: 1,
+      value: 'Майбутнє країни в наших руках!',
+    },
+  ],
+  initialText: [
+    {
+      id: 1,
+      value:
+        "Ми - молодіжна організація партії 'УДАР'. Наша команда об'єднує енергійних, креативних молодих людей, які хочуть зробити свій внесок у побудову кращого майбутнього для України.",
+    },
+  ],
+  initialButtonText: [
+    {
+      id: 1,
+      value: 'Дізнатися більше',
+    },
+  ],
 
   // LeaderParty section
   leaderPartyTitle: [{ id: 1, value: 'Лідер молодіжної партії «УДАР»' }],
@@ -46,8 +68,7 @@ const ukrainianTranslations = {
   joinTeamTitle: [
     {
       id: 1,
-      value:
-        'Разом ми сильніші, разом ми переможемо! Разом ми сильніші, разом ми переможемо!',
+      value: 'Разом ми сильніші, разом ми переможемо!',
     },
   ],
 
@@ -70,11 +91,9 @@ const ukrainianTranslations = {
     { id: 1, value: 'Контакти', href: '#' },
     { id: 2, value: 'Політика конфіденційності ', href: '#' },
   ],
- 
+
   linkItemsFooterContactMobile: [{ id: 1, value: 'Наш номер' }],
   linkItemsFooterContactEmail: [{ id: 1, value: 'Наша пошта' }],
- 
-
 };
 
 export default ukrainianTranslations;

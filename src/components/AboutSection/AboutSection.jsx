@@ -23,8 +23,23 @@ function AboutSection({ revers, mainCard, numberOfComponents }) {
       className="about-section"
       style={{ flexDirection: !revers ? 'row' : 'row-reverse' }}
     >
-      {mainCard ? <BigFotoCatd /> : <div className='about-section__foto-container' style={{height: numberOfComponents > 1 ? 450: 'auto'} }>{fotoCatdComponents}</div>}
-      <div className="about-section__text-content">
+      {mainCard ? (
+        <BigFotoCatd />
+      ) : (
+        <div
+          className="about-section__foto-container"
+          style={{ height: numberOfComponents > 1 ? 450 : 'auto' }}
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          {fotoCatdComponents}
+        </div>
+      )}
+      <div
+        className="about-section__text-content"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <img className="about-section__icon" src={icon} alt="icon" />
         <p className="about-section__text">
           Ми впевнені, що молодь - це майбутнє країни, і саме через спільні
