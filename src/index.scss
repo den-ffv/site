@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .content-wrapper {
 }
@@ -20,14 +21,27 @@ body {
 .main {
   flex: 1;
   padding: 0px 10px 0px 10px;
-  background: rgba(191,165,191,0.76);
-  background: linear-gradient(270deg,rgba(191,165,191,0.76) 51%, #ffffff 90%);
-  background: -webkit-linear-gradient(270deg,rgba(191,165,191,0.76) 51%, #ffffff 90%);
-  background: -moz-linear-gradient(270deg,rgba(191,165,191,0.76) 51%, #ffffff 90%);
-  &__container{
+  background: rgba(191, 165, 191, 0.76);
+  background: linear-gradient(
+    270deg,
+    rgba(191, 165, 191, 0.76) 51%,
+    #ffffff 90%
+  );
+  background: -webkit-linear-gradient(
+    270deg,
+    rgba(191, 165, 191, 0.76) 51%,
+    #ffffff 90%
+  );
+  background: -moz-linear-gradient(
+    270deg,
+    rgba(191, 165, 191, 0.76) 51%,
+    #ffffff 90%
+  );
+  &__container {
     max-width: $max_width;
     margin: 0 auto;
   }
+
 
 }
 .leader-bg{
@@ -35,6 +49,12 @@ body {
   background: url("./assets/png/leader-bg.png") no-repeat center;
   background-size: cover;
   background-position: center;
+
+}
+
+.language-selector button.active {
+  color: $basic-color_500;
+
 }
 
 .title {
@@ -45,6 +65,12 @@ body {
 
 // tablet adaptive
 
+@media screen and (min-width: $tablet_width) and (max-width: $labtop_width) {
+  .t-hide {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: $tablet_width) {
   .container {
     max-width: 768px;
@@ -54,10 +80,6 @@ body {
   .title {
     font-size: 24px;
     line-height: 30px;
-  }
-
-  .t-hide {
-    display: none !important;
   }
 }
 

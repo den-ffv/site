@@ -1,4 +1,4 @@
-@import "../../../variables.scss";
+@import '../../../variables.scss';
 .foto-card {
   width: 352px;
   height: 452px;
@@ -15,137 +15,134 @@
     width: 100%;
     margin-top: 20px;
   }
-  &:hover{
+  &:hover {
     transition: $transition;
     transform: rotate(-4.076deg) scale(0.9);
     z-index: 4;
   }
 }
-.rotate0{
+.rotate0 {
   position: absolute;
   transform: rotate(-13deg);
   right: 350px;
   top: 50px;
 }
-.rotate1{
+.rotate1 {
   position: absolute;
   right: 150px;
   z-index: 3;
 }
 .rotate2{
-  transform: rotate(9deg);
+  transform: rotate(9.669deg);
   right: -50px;
   top: -50px;
   position: absolute;
   &:hover{
-    transform: rotate(7deg) scale(0.9);
+    transform: rotate(7.076deg) scale(0.9);
   }
 }
-@media(max-width: 1800px){
-  .rotate0{
+@media (max-width: 1800px) {
+  .rotate0 {
     position: absolute;
     transform: rotate(-13deg);
     top: -150px;
-
   }
-  .rotate1{
+  .rotate1 {
     position: absolute;
     top: -50px;
     z-index: 3;
-
   }
-  .rotate2{
+  .rotate2 {
     position: absolute;
     transform: rotate(9.669deg);
     top: 50px;
-
   }
 }
-@media(max-width: 1460px){
+@media (max-width: 1460px) {
   .foto-card {
-    width:252px;
-    height: 312px;
+    width: 302px;
+    height: 352px;
     &__content {
-      width: 219px;
+      width: 259px;
       margin: 0px auto;
     }
-    &:hover{
+    &:hover {
       transition: $transition;
       transform: rotate(-4.076deg) scale(0.9);
       z-index: 4;
     }
   }
-  .rotate0{
+  .rotate0 {
     position: absolute;
     transform: rotate(-13.566deg);
     left: -7px;
     top: 100px;
   }
-  .rotate1{
+  .rotate1 {
     position: absolute;
     left: 50px;
     z-index: 3;
   }
-  .rotate2{
+  .rotate2 {
     transform: rotate(9.669deg);
     right: 50px;
     top: -100px;
     position: absolute;
   }
 }
-@media(max-width: 1151px){
-  .foto-card{
+@media (max-width: 1151px) {
+  .foto-card {
     margin: 0px auto;
   }
-  .rotate0{
+  .rotate0 {
     position: absolute;
     transform: rotate(-13.566deg);
     left: -7px;
     top: 10px;
   }
-  .rotate1{
+  .rotate1 {
     position: absolute;
     left: 0px;
     right: 0;
     margin: 0px auto;
     z-index: 3;
   }
-  .rotate2{
+  .rotate2 {
     transform: rotate(9.669deg);
     right: 5px;
     top: -10px;
     position: absolute;
   }
 }
-@media(max-width: 650px){
+@media (max-width: 650px) {
   .foto-card {
-    width:192px;
+    width: 192px;
     height: 242px;
     &__content {
       width: 172px;
       margin: 0px auto;
     }
-    &__img{
+    &__img {
       margin-top: 10px;
     }
-    &:hover{
+    &:hover {
       transition: $transition;
       transform: rotate(-4.076deg) scale(0.9);
       z-index: 4;
     }
   }
-  .rotate0{
+  .rotate0 {
     position: absolute;
     transform: rotate(-13.566deg);
-    left: 16px;
+    left: -7px;
     top: 100px;
   }
-  .rotate1{
+  .rotate1 {
     position: absolute;
     left: 50px;
     z-index: 3;
   }
-  .rotate2{
+  .rotate2 {
     transform: rotate(9.669deg);
     right: 20px;
     top: 160px;

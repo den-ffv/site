@@ -5,11 +5,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   color: $dark_color;
   &__text-content {
-    margin: 250px 0px 0px 0px;
-    max-width: 990px;
+    max-width: 700px;
   }
   &__title {
     font-size: 60px;
@@ -21,11 +19,12 @@
     font-style: normal;
     font-weight: 500;
     line-height: 125%;
-    margin: 50px 0px 130px 0px;
+    margin: 50px 0px 70px 0px;
   }
   &__button {
     font-size: 24px;
     font-style: normal;
+    cursor: pointer;
     font-weight: 600;
     line-height: 125%;
     color: $light_color;
@@ -34,8 +33,8 @@
     border: none;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
     transition: $transition;
-    &:hover{
-    transition: $transition;
+    &:hover {
+      transition: $transition;
       background: $basic-color_600;
     }
   }
