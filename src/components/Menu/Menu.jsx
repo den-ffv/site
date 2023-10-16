@@ -22,7 +22,7 @@ function Menu({
   return (
     <div className="menu-wrapper">
       <div className="menu__logo mobile-only">
-        <a href="/home">
+        <a href="/">
           <img src={logo} alt="logo" />
         </a>
       </div>

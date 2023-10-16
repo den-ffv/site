@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
+import englishTranslations from './language/englishTranslations';
+import ukrainianTranslations from './language/ukrainianTranslations';
+
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-
-// Components
-
-import ukrainianTranslations from './language/ukrainianTranslations';
-import englishTranslations from './language/englishTranslations';
 import Sliders from './components/Slider/Slider';
 import Title from './components/Title/Title';
 
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
-
-// Section
-
 import JoinToTeam from './components/JoinToTeam/JoinToTeam';
 import SocialMedia from './components/SocialMedia/SocialMedia';
 import LeaderParty from './components/LeaderParty/LeaderParty';
-
 import InitialBlockSection from './components/InitialBlockSection/InitialBlockSection';
 import AboutSection from './components/AboutSection/AboutSection';
+
+import icon1 from '/icon/icon.svg';
+import icon2 from '/icon/icon2.svg';
+import icon3 from '/icon/icon3.svg';
+import icon4 from '/icon/icon4.svg';
 
 function App() {
   const [currentLanguage, setCurrentLanguage] = useState(
@@ -30,58 +29,106 @@ function App() {
     'language',
     currentLanguage == null ? 'ua' : currentLanguage,
   );
-  useEffect(() => {}, [currentLanguage]);
 
   const translations =
     localStorage.getItem('language') === 'ua'
       ? ukrainianTranslations
       : englishTranslations;
 
-  const images = [
-    '/image-1.svg',
-    '/image-2.svg',
-    '/image-3.svg',
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+      document.title =
+        savedLanguage === 'en'
+          ? 'NGO "Youth Democratic Alliance for Reforms"'
+          : 'ГО «Молодіжний демократичний альянс за реформи»';
+    }
+  }, [currentLanguage]);
 
-    '/image-2.svg',
-    '/image-3.svg',
+  const images = ['/IMG_5.png', '/IMG_2.png', '/IMG_3.png', '/IMG_4.png', '/IMG_1.png'];
 
-    '/image-1.svg',
-    '/image-2.svg',
-    '/image-3.svg',
-    '/image-2.svg',
+  const dataAboutSection = [
+    {
+      id: 1,
+      revers: false,
+      mainCard: true,
+      numOfCompon: 1,
+      text: translations.aboutText1,
+      icon: icon1,
+      image: [{ id: 1, img: '/foto_1.png' }],
+    },
+    {
+      id: 2,
+      revers: true,
+      mainCard: false,
+      numOfCompon: 3,
+      text: translations.aboutText2,
+      icon: icon2,
+      image: [
+        { id: 2, img: '/foto_4.png' },
+        { id: 3, img: '/foto_5.png' },
+        { id: 4, img: '/foto_2.png' },
+      ],
+    },
+    {
+      id: 3,
+      revers: false,
+      mainCard: false,
+      numOfCompon: 1,
+      text: translations.aboutText3,
+      icon: icon3,
+      image: [{ id: 5, img: '/foto_3.png' }],
+    },
+    {
+      id: 4,
+      revers: true,
+      mainCard: false,
+      numOfCompon: 1,
+      text: translations.aboutText4,
+      icon: icon4,
+      image: [{ id: 6, img: '/foto_6.png' }],
+    },
   ];
 
   return (
-    <main className="container">
+    <div className="container">
       <ScrollToTopButton />
       <Header
         currentLanguage={currentLanguage}
         setCurrentLanguage={setCurrentLanguage}
         translations={translations}
       />
-    
+
       <div className="main">
         <div className="main__container">
           <InitialBlockSection translations={translations} />
-          <AboutSection revers={false} mainCard={true} numberOfComponents={1} />
-          <AboutSection revers={true} mainCard={false} numberOfComponents={3} />
-          <AboutSection
-            revers={false}
-            mainCard={false}
-            numberOfComponents={1}
-          />
-          <AboutSection revers={true} mainCard={false} numberOfComponents={1} />
+          {dataAboutSection.map((data) => (
+            <AboutSection
+              translations={translations}
+              key={data.id}
+              revers={data.revers}
+              mainCard={data.mainCard}
+              numberOfComponents={data.numOfCompon}
+              textInComponentAbout={data.text}
+              icon={data.icon}
+              image={data.image}
+            />
+          ))}
           <Title titleText={translations.sliderTitle} />
-          <Sliders images={images} />
+          <Sliders images={images} translations={translations} />
         </div>
       </div>
-        <div className="main__container">
+      <div>
+        <div className="leader-bg">
           <LeaderParty translations={translations} />
-          <SocialMedia translations={translations} />
-          <JoinToTeam translations={translations} />
-          <Footer translations={translations} />
         </div>
-    </main>
+      </div>
+      <div className="main__container">
+        <SocialMedia translations={translations} />
+        <JoinToTeam translations={translations} />
+      </div>
+      <Footer translations={translations} />
+    </div>
   );
 }
 

@@ -5,6 +5,7 @@
   background: #efeeee;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   transition: $transition;
+  transform: rotate(-8deg);
   &__content {
     width: 309px;
     height: 319px;
@@ -22,7 +23,7 @@
 }
 .rotate0{
   position: absolute;
-  transform: rotate(-13.566deg);
+  transform: rotate(-13deg);
   right: 350px;
   top: 50px;
 }
@@ -32,18 +33,18 @@
   z-index: 3;
 }
 .rotate2{
-  transform: rotate(9.669deg);
+  transform: rotate(9deg);
   right: -50px;
   top: -50px;
   position: absolute;
   &:hover{
-    transform: rotate(7.076deg) scale(0.9);
+    transform: rotate(7deg) scale(0.9);
   }
 }
 @media(max-width: 1800px){
   .rotate0{
     position: absolute;
-    transform: rotate(-13.566deg);
+    transform: rotate(-13deg);
     top: -150px;
 
   }
@@ -136,7 +137,7 @@
   .rotate0{
     position: absolute;
     transform: rotate(-13.566deg);
-    left: -7px;
+    left: 16px;
     top: 100px;
   }
   .rotate1{

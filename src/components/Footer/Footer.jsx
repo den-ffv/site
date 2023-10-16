@@ -8,22 +8,39 @@ import facebook from '../../assets/svg/facebook.svg';
 import './Footer.scss';
 
 function Footer({ translations }) {
+  const itemsSocialNetworks = [
+    {
+      id: 1,
+      icon: telegram,
+      alt: 'telegram',
+      href: 'https://t.me/Polit_Molod202',
+    },
+    {
+      id: 2,
+      icon: instagram,
+      alt: 'instagram',
+      href: 'https://instagram.com/polit_molod?igshid=MzRlODBiNWFlZA==',
+    },
+    {
+      id: 3,
+      icon: tiktok,
+      alt: 'tiktok',
+      href: 'https://www.tiktok.com/@polit_molod?_t=8gRdrufMjRe&_r=1',
+    },
+    { id: 4, icon: facebook, alt: 'facebook', href: '/' },
+  ];
+
   return (
-    <footer className="footer">
-      <div
-        className="footer__content"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
+    <footer className="footer" data-aos="fade-up" data-aos-duration="1000">
+      <div className="footer__content main__container">
         <div className="footer__wrapper">
           <a href="/Home" className="footer__logo">
             <img src={logo} alt="logo" />
           </a>
-          {translations.copyRight.map((copyRight) => (
-            <div className="footer__subtitle m-hide" key={copyRight.id}>
-              {copyRight.value}
-            </div>
-          ))}
+
+          <div className="footer__subtitle m-hide">
+            {translations.copyRight}
+          </div>
         </div>
         <div className="footer__wrapper">
           <div className="footer__wrapper-content">
@@ -78,58 +95,37 @@ function Footer({ translations }) {
         </div>
         <div className="footer__wrapper">
           <div className="footer__social">
-            <a href="https://t.me/Polit_Molod202" className="social-link">
-              <img
-                src={telegram}
-                className="footer__social-img"
-                alt="telegram"
-              ></img>
-            </a>
-            <a
-              href="https://instagram.com/polit_molod?igshid=MzRlODBiNWFlZA=="
-              className="social-link"
-            >
-              <img
-                src={instagram}
-                className="footer__social-img"
-                alt="instagram"
-              ></img>
-            </a>
-            <a
-              href="https://www.tiktok.com/@polit_molod?_t=8gRdrufMjRe&_r=1"
-              className="social-link"
-            >
-              <img
-                src={tiktok}
-                className="footer__social-img"
-                alt="tik tok"
-              ></img>
-            </a>
-            <a href="#" className="social-link">
-              <img
-                src={facebook}
-                className="footer__social-img"
-                alt="facebook"
-              ></img>
-            </a>
+            {itemsSocialNetworks.map((itemSM) => (
+              <a
+                key={itemSM.id}
+                className="social-link"
+                href={itemSM.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="footer__social-img"
+                  src={itemSM.icon}
+                  alt={itemSM.alt}
+                />
+              </a>
+            ))}
           </div>
-          {translations.linkItemsFooterContactMobile.map((item) => (
-            <div className="footer__mobile" key={item.id}>
-              {item.value}: <a href="tel:+380983803838">+380983803838</a>
-            </div>
-          ))}
-          {translations.linkItemsFooterContactEmail.map((item) => (
-            <div className="footer__gmail" key={item.id}>
-              {item.value}:{' '}
-              <a href="mailto:mdar_partiya@gmail.com">mdar_partiya.gmail</a>
-            </div>
-          ))}
+
+          <div className="footer__mobile">
+            <span>{translations.linkItemsFooterContactMobile}: </span>
+            <a href="tel:+380983803838">+380 98 380 38 38</a>
+          </div>
+
+          <div className="footer__gmail">
+            <span>{translations.linkItemsFooterContactEmail}: </span>
+            <a href="mailto:mdar_partiya@gmail.com">mdar_partiya.gmail</a>
+          </div>
         </div>
-        {translations.copyRight.map((copyRight) => (
-          <div className="footer__subtitle mobile-only" key={copyRight.id}>
-            {copyRight.value}
-          </div>
-        ))}
+
+        <div className="footer__subtitle mobile-only">
+          {translations.copyRight}
+        </div>
       </div>
     </footer>
   );

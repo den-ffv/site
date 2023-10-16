@@ -26,6 +26,7 @@
   }
 
   .device__image-link {
+
     &:first-child > .device__image {
       width: 300px;
       margin-right: 60px;
@@ -42,11 +43,6 @@
   .device__image {
     cursor: pointer;
     transition: 0.3s;
-
-    &:hover {
-      margin-bottom: 16px;
-      transition: 0.4s;
-    }
   }
 }
 

@@ -3,7 +3,7 @@
 .header {
   background: linear-gradient(180deg, #fff 0%, #fff 56.77%);
   box-shadow: 0 3px 40px 0px rgba(0, 0, 0, 0.15);
-  padding: 10px;
+  padding: 5px 20px;
 
   &__logo img {
     width: 70px;
@@ -30,7 +30,6 @@
     &-link {
       text-decoration: none;
       position: relative;
-      font-family: Fact;
       font-size: 18px;
       font-weight: bold;
       line-height: 30px;
@@ -62,15 +61,16 @@
       margin-right: 18px;
       list-style: none;
       padding-right: 18px;
-      border-right: 1px solid #000;
+      border-right: 2px solid #000;
 
       &:last-child {
+        border-right: none;
         margin-right: 0;
       }
     }
 
     .header__join-button-link:hover {
-      animation: none; /* Отключаем анимацию при наведении */
+      animation: none;
     }
 
     .header__translation-button {
@@ -78,7 +78,6 @@
       position: relative;
       border: none;
       cursor: pointer;
-      font-family: Fact;
       font-size: 18px;
       font-weight: bold;
       line-height: 30px;
@@ -89,13 +88,14 @@
       }
 
       &:first-child {
-        margin-right: 4px;
+        margin-right: 0px;
 
         &::after {
           content: '';
-          border-right: 1px solid #000;
+          border-right: 2px solid #000;
+          
           height: 20px;
-          margin-left: 4px;
+          margin: 0px 10px;
         }
       }
     }
@@ -113,7 +113,6 @@
         border: 2px solid $red-1;
         cursor: pointer;
         color: $red-1;
-        font-family: Fact;
         font-size: 18px;
         font-weight: bold;
         line-height: 30px;

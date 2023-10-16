@@ -6,15 +6,13 @@ import InitialBlockIcon from '/InitialBlockIcon.svg';
 
 function InitialBlockSection({translations}) {
   return (
-    <div className="initial-block">
+    <div className="initial-block" data-aos="fade-up" data-aos-duration="1000">
       <div className="initial-block__text-content">
-        <h1 className="initial-block__title">Майбутнє країни в наших руках!</h1>
+        <h1 className="initial-block__title">{translations.initialTitle}</h1>
         <p className="initial-block__text">
-          Ми - молодіжна організація партії "УДАР". Наша команда об'єднує
-          енергійних, креативних молодих людей, які хочуть зробити свій внесок у
-          побудову кращого майбутнього для України.
+          {translations.initialText}
         </p>
-        <button className="initial-block__button">Дізнатися більше</button>
+        <button className="initial-block__button">{translations.initialButtonText}</button>
       </div>
       <div className='initial-block__image-contaiter' >
         <img className="initial-block__image" src={InitialBlockIcon} alt="initial-block-icon" />

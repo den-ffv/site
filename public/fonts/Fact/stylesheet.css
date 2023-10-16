@@ -10,17 +10,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Fact';
-    src: url('Fact-Black.eot');
-    src: local('Fact Black'), local('Fact-Black'),
-        url('Fact-Black.eot?#iefix') format('embedded-opentype'),
-        url('Fact-Black.woff2') format('woff2'),
-        url('Fact-Black.woff') format('woff'),
-        url('Fact-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
 
 
 @font-face {

@@ -12,39 +12,39 @@ function SocialMedia({ translations }) {
     <section className="socialMedia">
       <div className="socialMedia__wrapper">
         <div className="socialMedia__wrapper-title">
-          {translations.socialMediaTitle.map((socialMediaTitle) => (
-            <h2
-              className="title"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              key={socialMediaTitle.id}
-            >
-              {socialMediaTitle.value}
-            </h2>
-          ))}
+          <h2 className="title" data-aos="fade-up" data-aos-duration="1000">
+            {translations.socialMediaTitle}
+          </h2>
         </div>
 
         <div
           className="socialMedia__wrapper-image"
           data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
         >
           <a
             href="https://instagram.com/polit_molod?igshid=MzRlODBiNWFlZA=="
+            target="_blank"
+            rel="noopener noreferrer"
             className="device__image-link"
           >
             <img className="device__image" src={iphone} alt="forms" />
           </a>
-          <a href="https://t.me/Polit_Molod202" className="device__image-link">
+          <a
+            href="https://t.me/Polit_Molod202"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="device__image-link"
+          >
             <img className="device__image" src={macbook} alt="forms" />
           </a>
         </div>
         <div
           className="socialMedia__content"
           data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
         >
-          <a href="https://t.me/Polit_Molod202" className="social-link">
+          <a href="https://t.me/Polit_Molod202"  target="_blank" rel="noopener noreferrer" className="social-link">
             <img
               src={telegram}
               className="socialMedia-img"
@@ -53,6 +53,7 @@ function SocialMedia({ translations }) {
           </a>
           <a
             href="https://instagram.com/polit_molod?igshid=MzRlODBiNWFlZA=="
+            target="_blank" rel="noopener noreferrer"
             className="social-link"
           >
             <img
@@ -63,6 +64,7 @@ function SocialMedia({ translations }) {
           </a>
           <a
             href="https://www.tiktok.com/@polit_molod?_t=8gRdrufMjRe&_r=1"
+            target="_blank" rel="noopener noreferrer"
             className="social-link"
           >
             <img src={tiktok} className="socialMedia-img" alt="tik tok"></img>

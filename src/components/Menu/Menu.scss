@@ -40,7 +40,6 @@
     position: relative;
     border: 1px solid $dark_color;
     cursor: pointer;
-    font-family: Fact;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
@@ -72,7 +71,6 @@
       border: 2px solid $red-1;
       cursor: pointer;
       color: $red-1;
-      font-family: Fact;
       font-size: 18px;
       font-weight: bold;
       line-height: 30px;
@@ -119,13 +117,13 @@
     height: 100vh;
     background-color: #f8f8f8;
     z-index: 10;
-    left: -100%;
-    transition: left 1s;
+    transform: translateY(-100%);
+    transition: 1s;
   }
 
   .menu-active {
-    left: 0;
-    transition: left 1s;
+    transform: translateY(0%);
+    transition: 1s;
   }
 
   .bar {
@@ -166,7 +164,6 @@
     text-align: center;
     text-decoration: none;
     position: relative;
-    font-family: Fact;
     font-size: 24px;
     font-weight: bold;
     line-height: 30px;

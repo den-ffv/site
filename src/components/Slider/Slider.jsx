@@ -7,7 +7,7 @@ import SliderItem from '../SliderItem/SliderItem';
 
 import arrowIcon from '/arrow.svg';
 
-function Sliders({ images }) {
+function Sliders({ images, translations }) {
   const [active, setActive] = useState(0);
   const [direction, setDirection] = useState('');
 
@@ -55,7 +55,7 @@ function Sliders({ images }) {
   };
 
   return (
-    <div className="slider" data-aos="fade-up" data-aos-duration="2000">
+    <div className="slider" data-aos="fade-up" data-aos-duration="1000">
       <div className="arrow arrow-left" onClick={moveLeft}>
         <p className="fi-arrow-left">
           <img src={arrowIcon} alt="arrow-icon" />
@@ -77,6 +77,9 @@ function Sliders({ images }) {
         </p>
       </div>
       <div className="dots">{renderDots()}</div>
+      <div className='slider-text'>
+        <p>{translations.sliderText}</p>
+      </div>
     </div>
   );
 }

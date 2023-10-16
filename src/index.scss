@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Fact';
+  font-family: $font-falinl-base;
 }
 .container {
   min-height: 100vh;
@@ -28,11 +28,16 @@ body {
     max-width: $max_width;
     margin: 0 auto;
   }
- 
+
+}
+.leader-bg{
+  position: relative;
+  background: url("./assets/png/leader-bg.png") no-repeat center;
+  background-size: cover;
+  background-position: center;
 }
 
 .title {
-  font-family: Fact;
   font-size: 36px;
   font-weight: bold;
   line-height: 60px;

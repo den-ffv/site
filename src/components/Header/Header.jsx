@@ -5,6 +5,13 @@ import './Header.scss';
 
 function Header({ currentLanguage, setCurrentLanguage, translations }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  if(isOpen){
+    document.body.style.overflow = "hidden"
+  }else{
+    document.body.style.overflow = "auto"
+  }
+
   const [shouldShake, setShouldShake] = useState(false);
 
   useEffect(() => {
@@ -43,13 +50,13 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
             className="header__translation-button"
             onClick={() => setCurrentLanguage('ua')}
           >
-            Укр
+            UA
           </button>
           <button
             className="header__translation-button"
             onClick={() => setCurrentLanguage('en')}
           >
-            Eng
+            ENG
           </button>
           {translations.linkButton.map((linkButton) => (
             <a
@@ -64,6 +71,7 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
           ))}
         </div>
       </div>
+      
       <Menu
         isOpen={isOpen}
         setIsOpen={setIsOpen}

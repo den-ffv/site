@@ -37,10 +37,9 @@
 
 .slider {
   position: relative;
- 
- 
+
   width: 100%;
- 
+
   height: 780px;
   &__img-content {
     position: relative;
@@ -64,7 +63,43 @@
     }
   }
 }
+.slider-text {
+  position: absolute;
+  color: $basic-color_500;
+  font-family: $font-falinl-quotes;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 116%;
+  text-align: center;
+  width: 409px;
+  transform: rotate(-23deg);
+  bottom: -50px;
+  right: 10px;
+  z-index: 120;
+  &::after {
+    content: url('/icon/line.svg');
+  }
+}
 
+@media(max-width: 1020px){
+  .slider-text {
+   font-size: 12px;
+    bottom: -120px;
+    right: 10px;
+    z-index: 120;
+    &::after {
+      content: url('/icon/line.svg');
+      display: inline-block;
+      width: 100px;
+    }
+  }
+}
+
+@media(max-width: 780px){
+  .slider-text {
+   display: none;
+  }
+}
 .dots {
   left: 0;
   right: 0;
@@ -92,25 +127,25 @@
   background: #ffffff;
 }
 
-$level2-height: 390px;
-$level2-width: 293px;
-$level1-height: 560px;
-$level1-width: 420px;
-$level0-height: 750px;
-$level0-width: 562px;
+$level2-height: 325px;
+$level2-width: 243px;
+$level1-height: 441px;
+$level1-width: 330px;
+$level0-height: 580px;
+$level0-width: 440px;
 
-$level-2-left: 916px;
-$level-1-left: 700px;
-$level0-left: 365px;
-$level1-left: 180px;
-$level2-left: 80px;
+$level-2-left: 220px;
+$level-1-left: 370px;
+$level0-left: '';
+$level1-left: 370px;
+$level2-left: 220px;
 
 .level-2 {
   height: $level2-height;
   width: $level2-width;
   line-height: $level2-height;
   background-color: #228291;
-  left: $level-2-left;
+  right: $level-2-left;
   margin-top: 180px;
   z-index: 0;
   &::before {
@@ -130,7 +165,7 @@ $level2-left: 80px;
   width: $level1-width;
   line-height: $level1-height;
   background-color: #6796e5;
-  left: $level-1-left;
+  right: $level-1-left;
   margin-top: 110px;
   z-index: 2;
   &::before {
@@ -294,7 +329,7 @@ $level2-left: 80px;
     line-height $transition;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1340px) {
   .slider {
     position: relative;
     height: 520px;
@@ -316,18 +351,18 @@ $level2-left: 80px;
   $level0-height: 480px;
   $level0-width: 360px;
 
-  $level-2-left: 67%;
-  $level-1-left: 60%;
-  $level0-left: 36%;
-  $level1-left: 26%;
-  $level2-left: 340px;
+  $level-2-left: 200px;
+  $level-1-left: 300px;
+  $level0-left: '';
+  $level1-left: 300px;
+  $level2-left: 200px;
 
   .level-2 {
     height: $level2-height;
     width: $level2-width;
     line-height: $level2-height;
     background-color: #228291;
-    left: $level-2-left;
+    right: $level-2-left;
     margin-top: 180px;
     z-index: 1;
   }
@@ -337,7 +372,7 @@ $level2-left: 80px;
     width: $level1-width;
     line-height: $level1-height;
     background-color: #6796e5;
-    left: $level-1-left;
+    right: $level-1-left;
     margin-top: 110px;
     z-index: 2;
   }
@@ -348,189 +383,6 @@ $level2-left: 80px;
     line-height: $level0-height;
     background-color: #4ec9e1;
     left: $level0-left;
-    z-index: 3;
-  }
-
-  .level1 {
-    height: $level1-height;
-    width: $level1-width;
-    line-height: $level1-height;
-    background-color: #6796e5;
-    margin-top: 110px;
-    left: $level1-left;
-
-    z-index: 2;
-  }
-
-  .level2 {
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    background-color: #228291;
-    margin-top: 180px;
-    left: $level2-left;
-
-    z-index: 1;
-  }
-
-  .left-enter {
-    opacity: 0;
-    left: $level2-left - $level2-width;
-    height: $level2-height - 30;
-    width: $level2-width - 20;
-    line-height: $level2-height - 30;
-    margin-top: 40px;
-  }
-
-  .left-enter.left-enter-active {
-    opacity: 1;
-    left: $level2-left;
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    margin-top: 25px;
-    transition:
-      left 1s,
-      opacity 1s,
-      height 1s,
-      width 1s,
-      margin-top 1s,
-      line-height 1s;
-  }
-
-  .left-leave {
-    opacity: 1;
-    left: $level-2-left;
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    margin-top: 25px;
-  }
-
-  .left-leave.left-leave-active {
-    // left: $level-2-left + $level2-width + 20;
-    opacity: 0;
-    height: $level2-height - 30;
-    line-height: 120px;
-    margin-top: 40px;
-    width: $level2-width - 20;
-    transition:
-      left 1s,
-      opacity 1s,
-      height 1s,
-      width 1s,
-      margin-top 1s,
-      line-height 1s;
-  }
-
-  .right-enter {
-    opacity: 0;
-    // left: $level-2-left + $level2-width;
-    height: $level2-height - 30;
-    width: $level2-width - 20;
-    line-height: $level2-height - 30;
-    margin-top: 40px;
-  }
-
-  .right-enter.right-enter-active {
-    left: $level-2-left;
-    opacity: 1;
-    height: $level2-height;
-    margin-top: 25px;
-    line-height: $level2-height;
-    width: $level2-width;
-    transition:
-      left 1s,
-      opacity 1s,
-      height 1s,
-      width 1s,
-      margin-top 1s,
-      line-height 1s;
-  }
-
-  .right-leave {
-    left: $level2-left;
-    height: $level2-height;
-    opacity: 1;
-    margin-top: 25px;
-    line-height: $level2-height;
-    width: $level2-width;
-  }
-
-  .right-leave.right-leave-active {
-    left: $level2-left - $level2-width;
-    opacity: 0;
-    height: $level2-height - 30;
-    width: $level2-width - 20;
-    line-height: $level2-height - 30;
-    margin-top: 40px;
-    transition:
-      left 1s,
-      opacity 1s,
-      height 1s,
-      width 1s,
-      margin-top 1s,
-      line-height 1s;
-  }
-}
-
-@media (max-width: 868px) {
-  .slider {
-    position: relative;
-    height: 520px;
-  }
-
-  .arrow {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    border: 3px solid $basic-color_500;
-    background: $light_color;
-    margin-top: 205px;
-  }
-
-  $level2-height: 146px;
-  $level2-width: 110px;
-  $level1-height: 293px;
-  $level1-width: 220px;
-  $level0-height: 480px;
-  $level0-width: 360px;
-
-  $level-2-left: 570px;
-  $level-1-left: 430px;
-  $level0-left: 190px;
-  $level1-left: 110px;
-  $level2-left: 70px;
-
-  .level-2 {
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    background-color: #228291;
-    left: $level-2-left;
-    margin-top: 180px;
-    z-index: 1;
-  }
-
-  .level-1 {
-    height: $level1-height;
-    width: $level1-width;
-    line-height: $level1-height;
-    background-color: #6796e5;
-    left: $level-1-left;
-    margin-top: 110px;
-    z-index: 2;
-  }
-
-  .level0 {
-    height: $level0-height;
-    width: $level0-width;
-    line-height: $level0-height;
-    background-color: #4ec9e1;
-    left: $level0-left;
-    // left: 0;
-    // right: 0;
-    // margin: 0 auto;
     z-index: 3;
   }
 
@@ -657,7 +509,267 @@ $level2-left: 80px;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 1160px) {
+  .slider {
+    position: relative;
+    height: 520px;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 3px solid $basic-color_500;
+    background: $light_color;
+    margin-top: 205px;
+  }
+
+  $level2-height: 146px;
+  $level2-width: 110px;
+  $level1-height: 293px;
+  $level1-width: 220px;
+  $level0-height: 480px;
+  $level0-width: 360px;
+
+  $level-2-left: 100px;
+  $level-1-left: 210px;
+  $level0-left: '';
+  $level1-left: 210px;
+  $level2-left: 100px;
+
+  .level-2 {
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    background-color: #228291;
+    right: $level-2-left;
+    margin-top: 180px;
+    z-index: 1;
+  }
+
+  .level-1 {
+    height: $level1-height;
+    width: $level1-width;
+    line-height: $level1-height;
+    background-color: #6796e5;
+    right: $level-1-left;
+    margin-top: 110px;
+    z-index: 2;
+  }
+
+  .level0 {
+    height: $level0-height;
+    width: $level0-width;
+    line-height: $level0-height;
+    background-color: #4ec9e1;
+    left: $level0-left;
+    z-index: 3;
+  }
+
+  .level1 {
+    height: $level1-height;
+    width: $level1-width;
+    line-height: $level1-height;
+    background-color: #6796e5;
+    margin-top: 110px;
+    left: $level1-left;
+
+    z-index: 2;
+  }
+
+  .level2 {
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    background-color: #228291;
+    margin-top: 180px;
+    left: $level2-left;
+
+    z-index: 1;
+  }
+
+  .left-enter {
+    opacity: 0;
+    left: $level2-left - $level2-width;
+    height: $level2-height - 30;
+    width: $level2-width - 20;
+    line-height: $level2-height - 30;
+    margin-top: 40px;
+  }
+
+  .left-enter.left-enter-active {
+    opacity: 1;
+    left: $level2-left;
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    margin-top: 25px;
+    transition:
+      left 1s,
+      opacity 1s,
+      height 1s,
+      width 1s,
+      margin-top 1s,
+      line-height 1s;
+  }
+
+  .left-leave {
+    opacity: 1;
+    left: $level-2-left;
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    margin-top: 25px;
+  }
+
+  .left-leave.left-leave-active {
+    left: $level-2-left + $level2-width + 20;
+    opacity: 0;
+    height: $level2-height - 30;
+    line-height: 120px;
+    margin-top: 40px;
+    width: $level2-width - 20;
+    transition:
+      left 1s,
+      opacity 1s,
+      height 1s,
+      width 1s,
+      margin-top 1s,
+      line-height 1s;
+  }
+
+  .right-enter {
+    opacity: 0;
+    left: $level-2-left + $level2-width;
+    height: $level2-height - 30;
+    width: $level2-width - 20;
+    line-height: $level2-height - 30;
+    margin-top: 40px;
+  }
+
+  .right-enter.right-enter-active {
+    left: $level-2-left;
+    opacity: 1;
+    height: $level2-height;
+    margin-top: 25px;
+    line-height: $level2-height;
+    width: $level2-width;
+    transition:
+      left 1s,
+      opacity 1s,
+      height 1s,
+      width 1s,
+      margin-top 1s,
+      line-height 1s;
+  }
+
+  .right-leave {
+    left: $level2-left;
+    height: $level2-height;
+    opacity: 1;
+    margin-top: 25px;
+    line-height: $level2-height;
+    width: $level2-width;
+  }
+
+  .right-leave.right-leave-active {
+    left: $level2-left - $level2-width;
+    opacity: 0;
+    height: $level2-height - 30;
+    width: $level2-width - 20;
+    line-height: $level2-height - 30;
+    margin-top: 40px;
+    transition:
+      left 1s,
+      opacity 1s,
+      height 1s,
+      width 1s,
+      margin-top 1s,
+      line-height 1s;
+  }
+}
+
+@media (max-width: 940px) {
+  .slider {
+    position: relative;
+    height: 520px;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 3px solid $basic-color_500;
+    background: $light_color;
+    margin-top: 205px;
+  }
+
+  $level2-height: 146px;
+  $level2-width: 110px;
+  $level1-height: 293px;
+  $level1-width: 220px;
+  $level0-height: 480px;
+  $level0-width: 360px;
+
+  $level-2-left: 100px;
+  $level-1-left: 150px;
+  $level0-left: '';
+  $level1-left: 150px;
+  $level2-left: 100px;
+
+  .level-2 {
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    background-color: #228291;
+    right: $level-2-left;
+    margin-top: 180px;
+    z-index: 1;
+  }
+
+  .level-1 {
+    height: $level1-height;
+    width: $level1-width;
+    line-height: $level1-height;
+    background-color: #6796e5;
+    right: $level-1-left;
+    margin-top: 110px;
+    z-index: 2;
+  }
+
+  .level0 {
+    height: $level0-height;
+    width: $level0-width;
+    line-height: $level0-height;
+    background-color: #4ec9e1;
+    left: $level0-left;
+    z-index: 3;
+  }
+
+  .level1 {
+    height: $level1-height;
+    width: $level1-width;
+    line-height: $level1-height;
+    background-color: #6796e5;
+    margin-top: 110px;
+    left: $level1-left;
+
+    z-index: 2;
+  }
+
+  .level2 {
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    background-color: #228291;
+    margin-top: 180px;
+    left: $level2-left;
+
+    z-index: 1;
+  }
+}
+
+@media (max-width: 620px) {
   .arrow {
     position: absolute;
     width: 28px;
@@ -693,16 +805,16 @@ $level2-left: 80px;
     }
   }
 
-  $level2-height: 400px;
-  $level2-width: 300px;
-  $level1-height: 400px;
-  $level1-width: 300px;
+  $level2-height: 250px;
+  $level2-width: 150px;
+  $level1-height: 300px;
+  $level1-width: 200px;
   $level0-height: 400px;
   $level0-width: 300px;
 
   $level-2-left: 0;
   $level-1-left: 0;
-  $level0-left: 0;
+  $level0-left: '';
   $level1-left: 0px;
   $level2-left: 0px;
 
@@ -710,7 +822,7 @@ $level2-left: 80px;
     height: $level2-height;
     width: $level2-width;
     line-height: $level2-height;
-    background-color: #228291;
+    background-color: transparent;
     margin-top: 0px;
     left: 0;
     right: 0;
@@ -722,7 +834,7 @@ $level2-left: 80px;
     height: $level1-height;
     width: $level1-width;
     line-height: $level1-height;
-    background-color: #6796e5;
+    background-color: transparent;
 
     left: 0;
     right: 0;
@@ -735,11 +847,8 @@ $level2-left: 80px;
     height: $level0-height;
     width: $level0-width;
     line-height: $level0-height;
-    background-color: #4ec9e1;
-    // left: $level0-left;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    background-color: transparent;
+    left: $level0-left;
     z-index: 3;
   }
 
@@ -747,7 +856,7 @@ $level2-left: 80px;
     height: $level1-height;
     width: $level1-width;
     line-height: $level1-height;
-    background-color: #6796e5;
+    background-color: transparent;
     margin-top: 0px;
 
     left: 0;
@@ -761,7 +870,7 @@ $level2-left: 80px;
     height: $level2-height;
     width: $level2-width;
     line-height: $level2-height;
-    background-color: #228291;
+    background-color: transparent;
     margin-top: 0px;
 
     left: 0;

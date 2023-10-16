@@ -1,35 +1,34 @@
 import React from 'react';
 import './AboutSection.scss';
 import FotoCart from './FotoCard/FotoCard';
-
-import icon from '/icon/icon.svg';
 import BigFotoCatd from './BigFotoCatd/BigFotoCatd';
 
-function AboutSection({ revers, mainCard, numberOfComponents }) {
-  const fotoCatdComponents = [];
+function AboutSection({ translations,revers, mainCard, numberOfComponents, textInComponentAbout, icon, image }) {
+  const fotoCardComponents = [];
 
-  for (let i = 0; i < numberOfComponents; i++) {
-    fotoCatdComponents.push(
-      <FotoCart
-        numberOfComponents={numberOfComponents}
-        rotateClass={`rotate${i}`}
-        key={i}
-      />,
-    );
+  if (image && image.length > 0){
+    image.forEach((foto, index) => {
+      fotoCardComponents.push(
+        <FotoCart
+          numberOfComponents={numberOfComponents}
+          image={foto.img}
+          rotateClass={`rotate${index}`}
+          key={index}
+        />
+      );
+    });
   }
 
   return (
     <div
-      className="about-section"
+      className="about-section" data-aos="fade-up" data-aos-duration="1000"
       style={{ flexDirection: !revers ? 'row' : 'row-reverse' }}
     >
-      {mainCard ? <BigFotoCatd /> : <div className='about-section__foto-container' style={{height: numberOfComponents > 1 ? 450: 'auto'} }>{fotoCatdComponents}</div>}
+      {mainCard ? <BigFotoCatd translations={translations} /> : <div className='about-section__foto-container' style={{height: numberOfComponents > 1 ? 450: 'auto'} }>{fotoCardComponents}</div>}
       <div className="about-section__text-content">
         <img className="about-section__icon" src={icon} alt="icon" />
         <p className="about-section__text">
-          Ми впевнені, що молодь - це майбутнє країни, і саме через спільні
-          зусилля, креативність та наполегливість ми можемо досягти позитивних
-          змін.
+          {textInComponentAbout}
         </p>
       </div>
     </div>

@@ -18,21 +18,23 @@
 
 .joinTeam__image {
   margin-bottom: 80px;
-  width: 100%;
+  width: 80%;
 }
 
 .joinTeam__content {
   position: relative;
+  display: flex;
+  justify-content: center;
 
   &-subtitle {
+    font-family: $font-falinl-quotes;
     position: absolute;
-    width: 600px;
+    width: 350px;
     text-align: center;
-    top: -172px;
-    transform: rotate(23.053deg);
-    right: 125px;
-    color: $red-1;
-    font-family: Segoe Script;
+    bottom: 50px;
+    transform: rotate(23deg);
+    left: 0;
+    color: $basic-color_500;
     font-size: 24px;
     font-weight: 700;
     line-height: 40px;
@@ -51,7 +53,6 @@
     border: 2px solid $red-1;
     cursor: pointer;
     color: $red-1;
-    font-family: Fact;
     font-size: 30px;
     font-weight: bold;
     line-height: 30px;
