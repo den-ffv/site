@@ -16,8 +16,6 @@ function Menu({
     setMenuActive(!menuActive);
   };
 
-  const menuClasses = isOpen ? 'burger-menu open' : 'burger-menu';
-  const menuContainerClasses = menuActive ? 'menu menu-active' : 'menu';
 
   return (
     <div className="menu-wrapper">
@@ -28,13 +26,9 @@ function Menu({
       </div>
 
       <div className="burger-container">
-        <div className={menuClasses} onClick={toggleMenu}>
-          <div className="bar" />
-          <div className="bar" />
-          <div className="bar" />
-        </div>
+      
         {isOpen && (
-          <div className={menuContainerClasses}>
+          <div className={!isOpen ? 'menu' : 'menu menu-active'}>
             <ul>
               {translations.linkItems.map((linkItem) => (
                 <li className="menu__content-list" key={linkItem.id}>

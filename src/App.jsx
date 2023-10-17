@@ -118,13 +118,13 @@ function App() {
           <Sliders images={images} translations={translations} />
         </div>
       </div>
-        <div className="main__container">
           <LeaderParty translations={translations} />
+        <div className="main__container">
           <SocialMedia translations={translations} />
           <JoinToTeam translations={translations} />
-          <Footer translations={translations} />
         </div>
-    </main>
+          <Footer translations={translations} />
+    </div>
   );
 }
 

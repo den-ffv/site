@@ -13,12 +13,7 @@
   }
 
   .open {
-    position: absolute;
-    background: $dark_color;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transform: translateY(-100%);
+    // transform: translateY(-100%);
   }
 
   .burger-menu {
@@ -31,7 +26,7 @@
     align-items: center;
     z-index: 1000;
     background: transparent;
-    left: -35px;
+    // left: 0;
     top: 8px;
   }
 
@@ -117,7 +112,7 @@
     height: 100vh;
     background-color: #f8f8f8;
     z-index: 10;
-    transform: translateY(-100%);
+    transform: translateY(0%);
     transition: 1s;
   }
 

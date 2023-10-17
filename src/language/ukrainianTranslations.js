@@ -1,17 +1,11 @@
 const ukrainianTranslations = {
   // header
   linkItems: [
-<<<<<<< HEAD
-    { id: 1, value: 'Новини', href: '/' },
-    { id: 2, value: 'Команда', href: '/' },
-    { id: 3, value: 'Про партію', href: '/' },
-    { id: 4, value: 'Контакти', href: '/' },
-=======
+
     { id: 1, value: 'Про нас', href: '/home' },
     { id: 2, value: 'Команда', href: '/Team' },
     { id: 3, value: 'Про партію', href: 'https://udar.party/' },
     { id: 4, value: 'Контакти', href: '/contact' },
->>>>>>> 09452565c852723c4bcccdfc1b8b852907744434
   ],
   linkButton: [{ id: 1, value: 'Приєднатися', href: '/' }],
 
@@ -28,7 +22,7 @@ const ukrainianTranslations = {
 
   // slider
   sliderTitle: 'Наша діяльність',
-<<<<<<< HEAD
+
   sliderText: '"Молодь, що змінює світ своїми діями!"',
 
   // InitialBlockSection
@@ -40,29 +34,7 @@ const ukrainianTranslations = {
   // about section
 
   abbrevioInImage: 'М.Д.А.Р',
-=======
 
-  // InitialBlockSection
-  initialTitle: [
-    {
-      id: 1,
-      value: 'Майбутнє країни в наших руках!',
-    },
-  ],
-  initialText: [
-    {
-      id: 1,
-      value:
-        "Ми - молодіжна організація партії 'УДАР'. Наша команда об'єднує енергійних, креативних молодих людей, які хочуть зробити свій внесок у побудову кращого майбутнього для України.",
-    },
-  ],
-  initialButtonText: [
-    {
-      id: 1,
-      value: 'Дізнатися більше',
-    },
-  ],
->>>>>>> 09452565c852723c4bcccdfc1b8b852907744434
 
   aboutText1:
     'Ми впевнені, що молодь - це майбутнє країни, і саме через спільні зусилля, креативність та наполегливість ми можемо досягти позитивних змін.',
@@ -82,25 +54,11 @@ const ukrainianTranslations = {
   socialMediaTitle: 'Соціальні мережі',
 
   // joinToTeam section
-<<<<<<< HEAD
+
   joinTeam:
     'Приєднуйся до нашої команди та стань частиною майбутнього, яке ми разом будуємо для України.',
   joinTeamTitle: 'Разом ми сильніші, разом ми переможемо!',
-=======
-  joinTeam: [
-    {
-      id: 1,
-      value:
-        'Приєднуйся до нашої команди та стань частиною майбутнього, яке ми разом будуємо для України.',
-    },
-  ],
-  joinTeamTitle: [
-    {
-      id: 1,
-      value: 'Разом ми сильніші, разом ми переможемо!',
-    },
-  ],
->>>>>>> 09452565c852723c4bcccdfc1b8b852907744434
+
 
   // footer
   copyRight:  'Всі права захищено © 2023 МДАР' ,
@@ -122,13 +80,9 @@ const ukrainianTranslations = {
     { id: 2, value: 'Політика конфіденційності ', href: '/' },
   ],
 
-<<<<<<< HEAD
   linkItemsFooterContactMobile:  'Наш номер',
   linkItemsFooterContactEmail:'Наша пошта',
-=======
-  linkItemsFooterContactMobile: [{ id: 1, value: 'Наш номер' }],
-  linkItemsFooterContactEmail: [{ id: 1, value: 'Наша пошта' }],
->>>>>>> 09452565c852723c4bcccdfc1b8b852907744434
+
 };
 
 export default ukrainianTranslations;

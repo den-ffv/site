@@ -22,13 +22,9 @@ function LeaderParty({ translations }) {
             </div>
             <div
               className="leaderParty__content-wrapper"
-<<<<<<< HEAD
               data-aos="fade-up"
               data-aos-duration="1000"
-=======
-              data-aos="fade-left"
-              data-aos-duration="2000"
->>>>>>> 09452565c852723c4bcccdfc1b8b852907744434
+
             >
               <div className="leaderParty__text">
                 <h2 className="leaderParty__content-title">

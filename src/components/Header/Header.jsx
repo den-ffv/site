@@ -21,6 +21,9 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
 
     return () => clearInterval(interval);
   }, []);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className="header">
@@ -75,7 +78,11 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
           ))}
         </div>
       </div>
-      
+      <div className={isOpen ? 'burger-menu open' : 'burger-menu'} onClick={toggleMenu}>
+          <div className="bar" />
+          <div className="bar" />
+          <div className="bar" />
+        </div>
       <Menu
         isOpen={isOpen}
         setIsOpen={setIsOpen}
