@@ -31,7 +31,47 @@
   }
 }
 
-@media (max-width: 650px) {
+@media screen and (min-width: $tablet_width) and (max-width: $labtop_width) {
+  .big-foto-card {
+    position: relative;
+    width: 341px;
+    height: 425px;
+    transform: rotate(-7.076deg);
+    background: #efeeee;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: $transition;
+    &__content {
+      transform: rotate(-0.076deg);
+      width: 310px;
+      margin: 15px auto;
+
+      img {
+        width: 100%;
+      }
+    }
+    
+    &__text {
+      color: $basic-color_500;
+      font-family: $font-falinl-quotes;
+      font-size: 41px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 52px;
+      display: inline-block;
+      transform: rotate(-23.989deg);
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+    }
+    &:hover {
+      transition: $transition;
+      transform: rotate(-4.076deg) scale(0.9);
+    }
+  }
+}
+
+
+@media (max-width: $mobile_width) {
   .big-foto-card {
     position: relative;
     width: 241px;

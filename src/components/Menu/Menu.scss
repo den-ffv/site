@@ -1,5 +1,11 @@
 @import '../../variables.scss';
 @media screen and (max-width: $mobile_width) {
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
   .menu-wrapper {
     display: flex;
     justify-content: space-between;

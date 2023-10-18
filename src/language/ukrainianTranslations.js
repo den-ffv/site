@@ -2,10 +2,10 @@ const ukrainianTranslations = {
   // header
   linkItems: [
 
-    { id: 1, value: 'Про нас', href: '/home' },
-    { id: 2, value: 'Команда', href: '/Team' },
+    { id: 1, value: 'Про нас', href: '#slider-anchor' },
+    { id: 2, value: 'Команда', href: '#leaderParty-anchor' },
     { id: 3, value: 'Про партію', href: 'https://udar.party/' },
-    { id: 4, value: 'Контакти', href: '/contact' },
+    { id: 4, value: 'Контакти', href: '#socialMedia-anchor' },
   ],
   linkButton: [{ id: 1, value: 'Приєднатися', href: '/' }],
 
@@ -63,7 +63,7 @@ const ukrainianTranslations = {
   // footer
   copyRight:  'Всі права захищено © 2023 МДАР' ,
   linkItemsFooterAbout: [
-    { id: 1, value: 'Про нас', href: '/' },
+    { id: 1, value: 'Про нас', href: '#slider-anchor' },
     { id: 2, value: 'Лідер', href: '/' },
     { id: 3, value: 'Команда', href: '/' },
     { id: 4, value: 'Історія партії', href: '/' },

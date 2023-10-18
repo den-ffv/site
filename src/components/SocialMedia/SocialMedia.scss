@@ -40,9 +40,14 @@
       animation: moveDown 2s ease-in-out infinite;
     }
   }
+
   .device__image {
     cursor: pointer;
     transition: 0.3s;
+
+    &:hover {
+      padding-bottom: 25px;
+    }
   }
 }
 

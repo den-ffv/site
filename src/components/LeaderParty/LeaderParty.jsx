@@ -6,7 +6,7 @@ import instagram from '../../assets/svg/instagram.svg';
 
 function LeaderParty({ translations }) {
   return (
-    <section className="leaderParty">
+    <section className="leaderParty" id="leaderParty-anchor">
       <div className="leaderParty__wrapper">
         <div className="leaderParty__wrapper-title">
           <h2 className="title" data-aos="fade-up" data-aos-duration="1000">

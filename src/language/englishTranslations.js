@@ -3,10 +3,10 @@ const englishTranslations = {
   // header
   linkItems: [
 
-    { id: 1, value: 'About us', href: '/home' },
-    { id: 2, value: 'Team', href: '/team' },
+    { id: 1, value: 'About us', href: '#slider-anchor' },
+    { id: 2, value: 'Team', href: '#leaderParty-anchor' },
     { id: 3, value: 'About party', href: 'https://udar.party/' },
-    { id: 4, value: 'Contact', href: '/contact' },
+    { id: 4, value: 'Contact', href: '#socialMedia-anchor' },
   ],
   linkButton: [{ id: 1, value: 'Join', href: '/' }],
 
@@ -29,7 +29,7 @@ const englishTranslations = {
 
   // about section
 
-  abbrevioInImage: 'M.D.A.R',
+  abbrevioInImage: 'Y.D.A.R',
 
   aboutText1:
     'We believe that young people are the future of the country, and it is through joint efforts, creativity and perseverance that we can achieve positive change.',
@@ -41,7 +41,7 @@ const englishTranslations = {
     'We have no restrictions on social status, faith or origin. We are open to cooperation with anyone who wants to contribute to changes in our society. Together we can do more!',
 
   // LeaderParty section
-  leaderPartyTitle: 'Leader of the youth party «KICK»',
+  leaderPartyTitle: 'Leader of the youth party «UDAR»',
   leaderPartyName: 'Damir Rakhmatullin',
   leaderPartyСitation:
     '"Young people are a force that can change the world. Their energy and independence are the key to tomorrow."',
@@ -67,7 +67,7 @@ const englishTranslations = {
     { id: 4, value: 'Party history', href: '/' },
   ],
   linkItemsFooterMedia: [
-    { id: 1, value: 'Media', href: '/' },
+    { id: 1, value: 'Media', href: '/', },
     { id: 2, value: 'News', href: '/' },
     { id: 3, value: 'Blog', href: '/' },
     { id: 4, value: 'Photo material', href: '/' },

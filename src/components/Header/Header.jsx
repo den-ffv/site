@@ -25,8 +25,19 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
     setIsOpen(!isOpen);
   };
 
+  const scrollToAnchor = (id) => {
+    const element = document.getElementById(id);
+    const headerHeight = document.querySelector('.header').offsetHeight;
+    const offsetTop = element.offsetTop - headerHeight;
+
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+    });
+  }
+  
   return (
-    <header className="header">
+    <header className="header" data-aos="fade-in">
       <div className="header__content m-hide">
         <div className="header__wapper">
           <div className="header__logo" data-aos="zoom-in">
@@ -41,7 +52,10 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
                 data-aos="zoom-in"
                 key={linkItem.id}
               >
-                <a className="header__content-link" href={linkItem.href}>
+                <a className="header__content-link" href={linkItem.href}  onClick={(e) => {
+                  e.preventDefault();
+                  scrollToAnchor(linkItem.href.substring(1)); // Используем scrollToAnchor
+                }}>
                   {linkItem.value}
                 </a>
               </li>

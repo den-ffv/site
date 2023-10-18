@@ -61,7 +61,7 @@ function Sliders({ images, translations }) {
   };
 
   return (
-    <div className="slider" data-aos="fade-up" data-aos-duration="1000">
+    <div className="slider" id="slider-anchor" data-aos="fade-up" data-aos-duration="1000">
       <div className="arrow arrow-left" onClick={moveLeft}>
         <p className="fi-arrow-left">
           <img src={arrowIcon} alt="arrow-icon" />
@@ -83,7 +83,7 @@ function Sliders({ images, translations }) {
         </p>
       </div>
       <div className="dots">{renderDots()}</div>
-      <div className='slider-text'>
+      <div className='slider-text t-hide'>
         <p>{translations.sliderText}</p>
       </div>
     </div>

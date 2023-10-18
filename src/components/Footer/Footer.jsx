@@ -13,7 +13,7 @@ function Footer({ translations }) {
       id: 1,
       icon: telegram,
       alt: 'telegram',
-      href: 'https://t.me/Polit_Molod202',
+      href: 'https://t.me/Polit_Molod2023',
     },
     {
       id: 2,

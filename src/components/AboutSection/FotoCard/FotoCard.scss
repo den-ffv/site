@@ -58,6 +58,7 @@
     top: 50px;
   }
 }
+
 @media (max-width: 1460px) {
   .foto-card {
     width: 302px;
@@ -134,7 +135,7 @@
   .rotate0 {
     position: absolute;
     transform: rotate(-13.566deg);
-    left: -7px;
+    left: 20px;
     top: 100px;
   }
   .rotate1 {
@@ -144,7 +145,7 @@
   }
   .rotate2 {
     transform: rotate(9.669deg);
-    right: 20px;
+    right: 10px;
     top: 160px;
     position: absolute;
   }
