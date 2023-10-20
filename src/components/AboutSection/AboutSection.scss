@@ -106,26 +106,33 @@
   }
 }
 
-
 //mobile
 @media screen and (max-width: 768px) {
   .about-section {
-    margin: 0px 0px 100px 0px;
-    
+    margin: 0px 0px 0px 0px;
+
+    &__foto-container {
+      margin-top: 50px;
+    }
+
+    .rotate1 {
+      top: 0;
+    }
+
     &__text {
       font-size: $basic_text_height_mobile;
       padding: 10px 0px 20px 0px;
       text-align: center;
-  
+
       &-content {
         flex-direction: column;
         align-items: center;
         margin-top: 45px;
       }
-  
+
       &__icon {
         margin: 0px 10px 0px 0px;
       }
-    } 
+    }
   }
 }

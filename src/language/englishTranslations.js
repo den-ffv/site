@@ -1,14 +1,18 @@
 const englishTranslations = {
-
   // header
   linkItems: [
-
     { id: 1, value: 'About us', href: '#slider-anchor' },
     { id: 2, value: 'Team', href: '#leaderParty-anchor' },
     { id: 3, value: 'About party', href: 'https://udar.party/' },
     { id: 4, value: 'Contact', href: '#socialMedia-anchor' },
   ],
-  linkButton: [{ id: 1, value: 'Join', href: '/' }],
+  linkButton: [
+    {
+      id: 1,
+      value: 'Join',
+      href: 'https://docs.google.com/forms/d/1m9dcgUMTz4Ze6HTzRzySH7Ivg6-Gk1Y4F8deZZlsB2c/viewform?edit_requested=true&pli=1',
+    },
+  ],
 
   // About Section
   aboutText: [
@@ -24,8 +28,14 @@ const englishTranslations = {
   // InitialBlockSection
   initialTitle: 'The future of the country is in our hands!',
   initialText:
-    'We are the youth organization of the UDAR party. Our team unites energetic, creative young people who want to contribute to building a better future for Ukraine.',
-  initialButtonText: 'Learn more',
+    'We are the youth organization of the YDAR party. Our team unites energetic, creative young people who want to contribute to building a better future for Ukraine.',
+  initialButton: [
+    {
+      id: 1,
+      value: 'Learn More',
+      href: '#slider-anchor',
+    },
+  ],
 
   // about section
 
@@ -41,11 +51,10 @@ const englishTranslations = {
     'We have no restrictions on social status, faith or origin. We are open to cooperation with anyone who wants to contribute to changes in our society. Together we can do more!',
 
   // LeaderParty section
-  leaderPartyTitle: 'Leader of the youth party «UDAR»',
+  leaderPartyTitle: 'Leader of the youth party «YDAR»',
   leaderPartyName: 'Damir Rakhmatullin',
   leaderPartyСitation:
     '"Young people are a force that can change the world. Their energy and independence are the key to tomorrow."',
-
 
   // SocialMedia section
   socialMediaTitle: 'Social media',
@@ -55,9 +64,7 @@ const englishTranslations = {
   joinTeam:
     'Join our team and become part of the future we are building for Ukraine together.',
 
-  joinTeamTitle:
-    'Together we are stronger, together we will win!',
-
+  joinTeamTitle: 'Together we are stronger, together we will win!',
 
   // Footer
   linkItemsFooterAbout: [
@@ -67,7 +74,7 @@ const englishTranslations = {
     { id: 4, value: 'Party history', href: '/' },
   ],
   linkItemsFooterMedia: [
-    { id: 1, value: 'Media', href: '/', },
+    { id: 1, value: 'Media', href: '/' },
     { id: 2, value: 'News', href: '/' },
     { id: 3, value: 'Blog', href: '/' },
     { id: 4, value: 'Photo material', href: '/' },
@@ -78,10 +85,9 @@ const englishTranslations = {
     { id: 2, value: 'Privacy Policy', href: '/' },
   ],
 
-  copyRight:  'Copyright © 2023 MDAR',
-  linkItemsFooterContactMobile:  'Our number' ,
-  linkItemsFooterContactEmail:'Our mail' ,
-
+  copyRight: 'Copyright © 2023 MDAR',
+  linkItemsFooterContactMobile: 'Our number',
+  linkItemsFooterContactEmail: 'Our mail',
 };
 
 export default englishTranslations;

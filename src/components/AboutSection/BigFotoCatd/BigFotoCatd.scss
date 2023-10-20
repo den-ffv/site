@@ -8,6 +8,13 @@
   background: #efeeee;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    transition: $transition;
+    transform: rotate(-4.076deg) scale(1.1) !important;
+  }
+
   &__content {
     width: 382.757px;
     margin: 26px auto;
@@ -24,10 +31,6 @@
     position: absolute;
     right: 0;
     bottom: 70px;
-  }
-  &:hover {
-    transition: $transition;
-    transform: rotate(-4.076deg) scale(0.9);
   }
 }
 
@@ -49,7 +52,7 @@
         width: 100%;
       }
     }
-    
+
     &__text {
       color: $basic-color_500;
       font-family: $font-falinl-quotes;
@@ -69,7 +72,6 @@
     }
   }
 }
-
 
 @media (max-width: $mobile_width) {
   .big-foto-card {

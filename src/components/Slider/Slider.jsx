@@ -7,6 +7,7 @@ import arrowIcon from '/arrow.svg';
 function Sliders({ images, translations }) {
   const [active, setActive] = useState(0);
   const [direction, setDirection] = useState('');
+  let touchStartX = null;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,6 +46,25 @@ function Sliders({ images, translations }) {
     setDirection('right');
   };
 
+  const handleTouchStart = (e) => {
+    touchStartX = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    if (touchStartX !== null) {
+      const touchEndX = e.touches[0].clientX;
+      const diff = touchStartX - touchEndX;
+
+      if (diff > 0) {
+        moveRight();
+      } else {
+        moveLeft();
+      }
+
+      touchStartX = null;
+    }
+  };
+
   const handleDotClick = (index) => {
     setActive(index);
     setDirection(index > active ? 'right' : 'left');
@@ -61,7 +81,14 @@ function Sliders({ images, translations }) {
   };
 
   return (
-    <div className="slider" id="slider-anchor" data-aos="fade-up" data-aos-duration="1000">
+    <div
+      className="slider"
+      id="slider-anchor"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+    >
       <div className="arrow arrow-left" onClick={moveLeft}>
         <p className="fi-arrow-left">
           <img src={arrowIcon} alt="arrow-icon" />
@@ -83,7 +110,7 @@ function Sliders({ images, translations }) {
         </p>
       </div>
       <div className="dots">{renderDots()}</div>
-      <div className='slider-text t-hide'>
+      <div className="slider-text t-hide">
         <p>{translations.sliderText}</p>
       </div>
     </div>

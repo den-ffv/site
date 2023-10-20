@@ -1,16 +1,18 @@
 const ukrainianTranslations = {
   // header
   linkItems: [
-
     { id: 1, value: 'Про нас', href: '#slider-anchor' },
     { id: 2, value: 'Команда', href: '#leaderParty-anchor' },
     { id: 3, value: 'Про партію', href: 'https://udar.party/' },
     { id: 4, value: 'Контакти', href: '#socialMedia-anchor' },
   ],
-  linkButton: [{ id: 1, value: 'Приєднатися', href: '/' }],
-
-
-
+  linkButton: [
+    {
+      id: 1,
+      value: 'Приєднатися',
+      href: 'https://docs.google.com/forms/d/1m9dcgUMTz4Ze6HTzRzySH7Ivg6-Gk1Y4F8deZZlsB2c/viewform?edit_requested=true&pli=1',
+    },
+  ],
 
   // About
   aboutText: [
@@ -26,15 +28,19 @@ const ukrainianTranslations = {
   sliderText: '"Молодь, що змінює світ своїми діями!"',
 
   // InitialBlockSection
-  initialTitle: 'Майбутнє країни в наших руках!',
+  initialTitle: 'Майбутнє країни в руках молоді!',
   initialText:
     "Ми - молодіжна організація партії 'УДАР'. Наша команда об'єднує енергійних, креативних молодих людей, які хочуть зробити свій внесок у побудову кращого майбутнього для України.",
-  initialButtonText: 'Дізнатися більше',
-
+  initialButton: [
+    {
+      id: 1,
+      value: 'Дізнатися більше',
+      href: '#slider-anchor',
+    },
+  ],
   // about section
 
   abbrevioInImage: 'М.Д.А.Р',
-
 
   aboutText1:
     'Ми впевнені, що молодь - це майбутнє країни, і саме через спільні зусилля, креативність та наполегливість ми можемо досягти позитивних змін.',
@@ -59,9 +65,8 @@ const ukrainianTranslations = {
     'Приєднуйся до нашої команди та стань частиною майбутнього, яке ми разом будуємо для України.',
   joinTeamTitle: 'Разом ми сильніші, разом ми переможемо!',
 
-
   // footer
-  copyRight:  'Всі права захищено © 2023 МДАР' ,
+  copyRight: 'Всі права захищено © 2023 МДАР',
   linkItemsFooterAbout: [
     { id: 1, value: 'Про нас', href: '#slider-anchor' },
     { id: 2, value: 'Лідер', href: '/' },
@@ -80,9 +85,8 @@ const ukrainianTranslations = {
     { id: 2, value: 'Політика конфіденційності ', href: '/' },
   ],
 
-  linkItemsFooterContactMobile:  'Наш номер',
-  linkItemsFooterContactEmail:'Наша пошта',
-
+  linkItemsFooterContactMobile: 'Наш номер',
+  linkItemsFooterContactEmail: 'Наша пошта',
 };
 
 export default ukrainianTranslations;

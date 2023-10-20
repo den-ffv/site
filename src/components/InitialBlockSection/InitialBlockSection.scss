@@ -13,7 +13,7 @@
   }
 
   &__text-content {
-    max-width: 700px;
+    max-width: 545px;
   }
   &__title {
     font-size: 60px;
@@ -27,7 +27,7 @@
     line-height: 125%;
     margin: 50px 0px 70px 0px;
   }
-  &__button {
+  &__link {
     font-size: 24px;
     font-style: normal;
     cursor: pointer;
@@ -39,6 +39,7 @@
     border: none;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
     transition: $transition;
+    text-decoration: none;
     &:hover {
       transition: $transition;
       background: $basic-color_600;
@@ -56,7 +57,7 @@
     color: $dark_color;
     &__text-content {
       margin: 50px 0px 0px 0px;
-      max-width: 590px;
+      max-width: 545px;
       position: relative;
       z-index: 2;
     }
@@ -126,6 +127,7 @@
       padding: 18px 32px;
       border: none;
       box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+      font-family: Fact;
     }
   }
 }
@@ -140,9 +142,13 @@
 
 //mobile
 @media screen and (max-width: 768px) {
-  .initial-block__image {
-    height: 400px;
-    left: 250px;
+  .initial-block {
+    margin-bottom: 100px;
+
+    &__image {
+      height: 400px;
+      left: 250px;
+    }
   }
 }
 

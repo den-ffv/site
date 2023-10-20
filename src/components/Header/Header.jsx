@@ -6,10 +6,10 @@ import './Header.scss';
 function Header({ currentLanguage, setCurrentLanguage, translations }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  if(isOpen){
-    document.body.style.overflow = "hidden"
-  }else{
-    document.body.style.overflow = "auto"
+  if (isOpen) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
   }
 
   const [shouldShake, setShouldShake] = useState(false);
@@ -32,10 +32,10 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
 
     window.scrollTo({
       top: offsetTop,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
-  }
-  
+  };
+
   return (
     <header className="header" data-aos="fade-in">
       <div className="header__content m-hide">
@@ -52,10 +52,14 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
                 data-aos="zoom-in"
                 key={linkItem.id}
               >
-                <a className="header__content-link" href={linkItem.href}  onClick={(e) => {
-                  e.preventDefault();
-                  scrollToAnchor(linkItem.href.substring(1)); // Используем scrollToAnchor
-                }}>
+                <a
+                  className="header__content-link"
+                  href={linkItem.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToAnchor(linkItem.href.substring(1)); // Используем scrollToAnchor
+                  }}
+                >
                   {linkItem.value}
                 </a>
               </li>
@@ -92,11 +96,14 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
           ))}
         </div>
       </div>
-      <div className={isOpen ? 'burger-menu open' : 'burger-menu'} onClick={toggleMenu}>
-          <div className="bar" />
-          <div className="bar" />
-          <div className="bar" />
-        </div>
+      <div
+        className={isOpen ? 'burger-menu open' : 'burger-menu'}
+        onClick={toggleMenu}
+      >
+        <div className="bar" />
+        <div className="bar" />
+        <div className="bar" />
+      </div>
       <Menu
         isOpen={isOpen}
         setIsOpen={setIsOpen}

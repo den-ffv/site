@@ -17,23 +17,19 @@ function JoinToTeam({ translations }) {
     <section className="joinTeam">
       <div className="joinTeam__wrapper">
         <div className="joinTeam__wrapper-title">
-          <h2
-            className="title"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
+          <h2 className="title" data-aos="fade-up" data-aos-duration="1000">
             {translations.joinTeam}
           </h2>
         </div>
 
         <div className="joinTeam__content">
-        <img
-          className="joinTeam__image"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          src={forms}
-          alt="forms"
-        />
+          <img
+            className="joinTeam__image"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            src={forms}
+            alt="forms"
+          />
           <p className="joinTeam__content-subtitle m-hide t-hide">
             {translations.joinTeamTitle}
           </p>

@@ -45,7 +45,13 @@ function App() {
     }
   }, [currentLanguage]);
 
-  const images = ['/IMG_5.png', '/IMG_2.png', '/IMG_3.png', '/IMG_4.png', '/IMG_1.png'];
+  const images = [
+    '/IMG_5.png',
+    '/IMG_2.png',
+    '/IMG_3.png',
+    '/IMG_4.png',
+    '/IMG_1.png',
+  ];
 
   const dataAboutSection = [
     {
@@ -118,12 +124,12 @@ function App() {
           <Sliders images={images} translations={translations} />
         </div>
       </div>
-          <LeaderParty translations={translations} />
-        <div className="main__container">
-          <SocialMedia translations={translations} />
-          <JoinToTeam translations={translations} />
-        </div>
-          <Footer translations={translations} />
+      <LeaderParty translations={translations} />
+      <div className="main__container">
+        <SocialMedia translations={translations} />
+        <JoinToTeam translations={translations} />
+      </div>
+      <Footer translations={translations} />
     </div>
   );
 }

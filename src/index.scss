@@ -41,26 +41,22 @@ body {
     max-width: $max_width;
     margin: 0 auto;
   }
-
-
 }
-.leader-bg{
+.leader-bg {
   position: relative;
-  background: url("./assets/png/leader-bg.png") no-repeat center;
+  background: url('./assets/png/leader-bg.png') no-repeat center;
   background-size: cover;
   background-position: center;
-
 }
 
 .language-selector button.active {
   color: $basic-color_500;
-
 }
 
 .title {
-  font-size: 36px;
+  font-size: $h2_size;
   font-weight: bold;
-  line-height: 60px;
+  line-height: $h1_height;
 }
 
 // tablet adaptive
@@ -78,7 +74,7 @@ body {
   }
 
   .title {
-    font-size: 24px;
+    font-size: 24px !important;
     line-height: 30px;
   }
 }
@@ -98,8 +94,9 @@ body {
     display: none !important;
   }
 
-  .title {
-    font-size: 24px;
+  .title,
+  .section-title {
+    font-size: $subtitle_size !important;
     line-height: 28px;
     text-align: center;
   }
@@ -108,7 +105,7 @@ body {
 // scroll bar
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {

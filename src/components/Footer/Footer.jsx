@@ -34,7 +34,7 @@ function Footer({ translations }) {
     <footer className="footer" data-aos="fade-up" data-aos-duration="1000">
       <div className="footer__content main__container">
         <div className="footer__wrapper">
-          <a href="/Home" className="footer__logo">
+          <a href="/home" className="footer__logo">
             <img src={logo} alt="logo" />
           </a>
 
