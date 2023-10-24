@@ -41,7 +41,7 @@ const Menu = ({
   return (
     <div className="menu-wrapper mobile-only">
       <div className="menu__logo mobile-only">
-        <a href="/home">
+        <a href="/">
           {localStorage.getItem('language') === 'ua' ? (
             <img src={logoUa} alt="logo" />
           ) : (

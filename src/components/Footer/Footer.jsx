@@ -35,7 +35,7 @@ function Footer({ translations }) {
     <footer className="footer" data-aos="fade-up" data-aos-duration="1000">
       <div className="footer__content main__container">
         <div className="footer__wrapper">
-          <a href="/home" className="footer__logo">
+          <a href="/" className="footer__logo">
             { localStorage.getItem('language') === 'ua' ? (
 
               <img src={logoUa} alt="logo" />

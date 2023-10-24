@@ -42,7 +42,7 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
       <div className="header__content m-hide">
         <div className="header__wapper">
           <div className="header__logo" data-aos="zoom-in">
-            <a href="/home">
+            <a href="/">
               {localStorage.getItem('language') === 'ua' ? (
                 <img src={logoUa} alt="logo" />
               ) : (
@@ -62,7 +62,7 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
                   href={linkItem.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToAnchor(linkItem.href.substring(1)); 
+                    scrollToAnchor(linkItem.href.substring(1));
                   }}
                 >
                   {linkItem.value}
