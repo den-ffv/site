@@ -37,9 +37,6 @@
   right: -50px;
   top: -50px;
   position: absolute;
-  &:hover {
-    transform: rotate(7.076deg) scale(0.9);
-  }
 }
 @media (max-width: 1800px) {
   .rotate0 {
@@ -62,16 +59,12 @@
 @media (max-width: 1460px) {
   .foto-card {
     width: 302px;
-    height: 352px;
+    height: 375px;
     &__content {
-      width: 259px;
+      width: 265px;
       margin: 0px auto;
     }
-    &:hover {
-      transition: $transition;
-      transform: rotate(-4.076deg) scale(0.9);
-      z-index: 4;
-    }
+
   }
   .rotate0 {
     position: absolute;
@@ -126,11 +119,7 @@
     &__img {
       margin-top: 10px;
     }
-    &:hover {
-      transition: $transition;
-      transform: rotate(-4.076deg) scale(0.9);
-      z-index: 4;
-    }
+ 
   }
   .rotate0 {
     position: absolute;

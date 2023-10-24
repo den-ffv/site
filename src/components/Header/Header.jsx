@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Menu from '../Menu/Menu';
-import logo from '../../assets/svg/logo.svg';
+import logoUa from '../../assets/svg/logoUa.svg';
+import logoEn from '../../assets/svg/logoEn.svg';
 import './Header.scss';
 
 function Header({ currentLanguage, setCurrentLanguage, translations }) {
@@ -42,7 +43,11 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
         <div className="header__wapper">
           <div className="header__logo" data-aos="zoom-in">
             <a href="/home">
-              <img src={logo} alt="logo" />
+              {localStorage.getItem('language') === 'ua' ? (
+                <img src={logoUa} alt="logo" />
+              ) : (
+                <img src={logoEn} alt="logo" />
+              )}
             </a>
           </div>
           <ul className="header__content-ul">
@@ -57,7 +62,7 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
                   href={linkItem.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToAnchor(linkItem.href.substring(1)); // Используем scrollToAnchor
+                    scrollToAnchor(linkItem.href.substring(1)); 
                   }}
                 >
                   {linkItem.value}
@@ -88,6 +93,8 @@ function Header({ currentLanguage, setCurrentLanguage, translations }) {
               className={`header__join-button-link ${
                 shouldShake ? 'shake' : ''
               }`}
+              target="_blank"
+              rel="noopener noreferrer"
               key={linkButton.id}
               href={linkButton.href}
             >

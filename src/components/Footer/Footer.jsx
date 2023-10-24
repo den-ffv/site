@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../../assets/svg/logo.svg';
+import logoUa from '../../assets/svg/logoUa.svg';
+import logoEn from '../../assets/svg/logoEn.svg';
 import telegram from '../../assets/svg/telegram.svg';
 import instagram from '../../assets/svg/instagram.svg';
 import tiktok from '../../assets/svg/tiktok.svg';
@@ -35,7 +36,12 @@ function Footer({ translations }) {
       <div className="footer__content main__container">
         <div className="footer__wrapper">
           <a href="/home" className="footer__logo">
-            <img src={logo} alt="logo" />
+            { localStorage.getItem('language') === 'ua' ? (
+
+              <img src={logoUa} alt="logo" />
+            ) : (
+              <img src={logoEn} alt="logo" />
+            )}
           </a>
 
           <div className="footer__subtitle m-hide">

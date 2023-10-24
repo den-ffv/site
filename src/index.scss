@@ -8,6 +8,7 @@
 
 body {
   font-family: $font-falinl-base;
+  background: url(../public/main-bg.png)100% 100%;
 }
 .container {
   min-height: 100vh;
@@ -16,30 +17,19 @@ body {
   overflow: hidden;
 }
 .content-wrapper {
+
 }
 
 .main {
   flex: 1;
   padding: 0px 10px 0px 10px;
-  background: rgba(191, 165, 191, 0.76);
-  background: linear-gradient(
-    270deg,
-    rgba(191, 165, 191, 0.76) 51%,
-    #ffffff 90%
-  );
-  background: -webkit-linear-gradient(
-    270deg,
-    rgba(191, 165, 191, 0.76) 51%,
-    #ffffff 90%
-  );
-  background: -moz-linear-gradient(
-    270deg,
-    rgba(191, 165, 191, 0.76) 51%,
-    #ffffff 90%
-  );
+  background: linear-gradient(270deg, #d8d0d8 51%, #ffffff 90%);
+  background: -webkit-linear-gradient(270deg, #d8d0d8 51%, #ffffff 90%);
+  background: -moz-linear-gradient(270deg, #d8d0d8 51%, #ffffff 90%);
   &__container {
     max-width: $max_width;
     margin: 0 auto;
+    padding: 0 20px;
   }
 }
 .leader-bg {

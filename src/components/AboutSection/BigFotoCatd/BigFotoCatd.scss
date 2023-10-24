@@ -9,7 +9,7 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   transition: $transition;
   cursor: pointer;
-
+  margin: 0px 0px 0px 20px;
   &:hover {
     transition: $transition;
     transform: rotate(-4.076deg) scale(1.1) !important;
@@ -82,6 +82,7 @@
     background: #efeeee;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     transition: $transition;
+    margin: 0;
     &__content {
       width: 210px;
       margin: 15px auto;

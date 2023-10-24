@@ -39,6 +39,8 @@ function JoinToTeam({ translations }) {
             className={`joinTeam__join-button-link ${
               shouldShake ? 'shake' : ''
             }`}
+            target="_blank"
+            rel="noopener noreferrer"
             key={linkButton.id}
             href={linkButton.href}
           >
