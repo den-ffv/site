@@ -65,7 +65,7 @@ const englishTranslations = {
     'Join our team and become part of the future we are building for Ukraine together.',
 
   joinTeamTitle: 'Together we are stronger, together we will win!',
-
+  
   // Footer
   linkItemsFooterAbout: [
     { id: 1, value: 'About us', href: '/' },

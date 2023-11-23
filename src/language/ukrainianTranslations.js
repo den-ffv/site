@@ -56,6 +56,12 @@ const ukrainianTranslations = {
   leaderPartyName: 'Дамір Рахматуллін',
   leaderPartyСitation:
     '"Молодь - це сила, яка може змінити світ. Її енергія і незалежність - ключ до завтрашнього дня."',
+  
+  // Policy section
+
+  
+
+
   // SocialMedia section
   socialMediaTitle: 'Соціальні мережі',
 

@@ -14,6 +14,7 @@ import SocialMedia from './components/SocialMedia/SocialMedia';
 import LeaderParty from './components/LeaderParty/LeaderParty';
 import InitialBlockSection from './components/InitialBlockSection/InitialBlockSection';
 import AboutSection from './components/AboutSection/AboutSection';
+import Policy from './components/Policy/Policy'; 
 
 import icon1 from '/icon/icon.svg';
 import icon2 from '/icon/icon2.svg';
