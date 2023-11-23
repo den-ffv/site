@@ -71,6 +71,11 @@ const ukrainianTranslations = {
     'Приєднуйся до нашої команди та стань частиною майбутнього, яке ми разом будуємо для України.',
   joinTeamTitle: 'Разом ми сильніші, разом ми переможемо!',
 
+//NotFound section
+
+  titleNotFound: 'Сталась якась біда. Сторінка не існує.',
+  backToHome: 'Повернутися додому',
+
   // footer
   copyRight: 'Всі права захищено © 2023 МДАР',
   linkItemsFooterAbout: [
