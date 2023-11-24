@@ -17,6 +17,11 @@ import AboutSection from './components/AboutSection/AboutSection';
 import Policy from './components/Policy/Policy'; 
 import NotFound from './components/NotFound/NotFound';
 
+import Policy from './components/Policy/Policy'; 
+import NotFound from './components/NotFound/NotFound';
+import Contact from './components/Contact/Contact';
+
+
 import icon1 from '/icon/icon.svg';
 import icon2 from '/icon/icon2.svg';
 import icon3 from '/icon/icon3.svg';
@@ -46,6 +51,7 @@ function App() {
           : 'ГО «Молодіжний демократичний альянс за реформи»';
     }
   }, [currentLanguage]);
+
 
   const images = [
     '/IMG_5.png',
@@ -149,6 +155,8 @@ function App() {
       <Footer translations={translations} />
     </div>
   );
+
+  
 }
 
 export default App;
