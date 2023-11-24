@@ -1,14 +1,7 @@
 import './Policy.scss';
 
 function Policy({ translations }) {
-  const policyItems = Object.entries(translations).reduce(
-    (acc, [key, value]) => {
-      acc[key] = () => value;
-      return acc;
-    },
-    {},
-  );
-
+  
   return (
     <section className="policy">
       <div className="policy__container">
