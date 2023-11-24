@@ -16,9 +16,6 @@ import InitialBlockSection from './components/InitialBlockSection/InitialBlockSe
 import AboutSection from './components/AboutSection/AboutSection';
 import Policy from './components/Policy/Policy'; 
 import NotFound from './components/NotFound/NotFound';
-
-import Policy from './components/Policy/Policy'; 
-import NotFound from './components/NotFound/NotFound';
 import Contact from './components/Contact/Contact';
 
 
