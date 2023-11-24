@@ -8,14 +8,12 @@ function NotFound({ translations }) {
     return (
         <section className='NotFound'>
             <div className='NotFound__wrapper'>
-                <div className='NotFound__content-title'>
-                    <h2>{translations.titleNotFound}</h2>
+                <h2 className='NotFound-title' data-aos='zoom-in' >{translations.titleNotFound}</h2>
+                <div className='NotFound-img' data-aos='zoom-in' >                    
+                    <img className='img' src={notfound} alt="404" />
                 </div>
-                <div className='NotFound__content-img'>
-                    <img src={notfound} alt="404" />
-                </div>
-                <div className='NotFound__content-button'>
-                    <button onClick={BackToHome}>{translations.backToHome}</button>
+                <div className='NotFound-button' data-aos='zoom-out-up' >
+                    <BackToHome translations={translations}/>
                 </div>
             </div>
         </section>

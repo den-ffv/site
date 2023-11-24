@@ -1,0 +1,49 @@
+@import '../../variables.scss';
+
+.NotFound {
+    min-height: 100vh;
+    background: url('../../assets/png/NotFound-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 88px 0px 98px 0px;
+}
+
+.NotFound__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 88px;
+    position: relative;
+}
+
+.NotFound-title{
+    text-align: center;
+}
+
+.img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+//tablet
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .NotFound {
+        padding: 88px 0px 0px 0px;
+        // height: 817px;
+        min-height: 100vh;
+    }
+    .NotFound-img {
+        width: 622px;
+        height: 265px;
+    }
+}
+
+//mobile
+@media screen and (max-width: $mobile_width) {
+    .NotFound-title {
+        width: 260px;
+        height: 60px;
+    }
+}

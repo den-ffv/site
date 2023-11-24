@@ -1,0 +1,58 @@
+@import '../../variables.scss';
+
+$button-color: #4c4c4c;
+
+
+.Frame {
+    width: auto !important;
+    position: relative;
+
+    &:hover {
+        .Button-img {
+            filter: invert(30%);
+            transition: $transition;
+        }
+        .Button-text {
+            color: $button-color;
+            transition: $transition;
+        }
+
+        .Button-underLine {
+            background-color: $button-color;
+            transition: $transition;
+        }
+        transition: $transition;
+        transform: translateY(-5px);
+    }
+}
+.Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: 0;
+    font-family: $font-falinl-base;
+    font-size: $subtitle_size;
+    line-height: $subtitle_height;
+}
+
+.Button-text {
+    margin-left: 5px;
+}
+
+
+.Button-img {
+    width: 35px;
+    height: 35px;
+    padding: 10.573px 6.197px 10.208px 5.469px;
+    flex-shrink: 0; 
+}
+
+.Button-underLine {
+    background-color: $dark_color;
+    height: 2px;
+    left: 5px;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}  

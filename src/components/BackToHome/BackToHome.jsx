@@ -1,22 +1,22 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState, useEffect} from 'react';
 import './BackToHome.scss'
 import arrow from '../../assets/png/btnToHome.png';
 
-function BackToHome () {
-    const [isBack, setIsBack] = useState(false);
-    const buttonRef = useRef();
+function BackToHome ({ translations }) {
 
-    useEffect(() => {
-        if (isBack) {
-            window.location.href = '/';
-        }
-    }, [isBack]);
-
-
-    return (    
-        <img src={arrow} alt="Arrow"/>,
-        <button onClick={() => setIsBack(true)} ref={buttonRef}>{}</button>
+    return (
+        <div className='Frame'>
+            <button 
+            className='Button'
+            onClick={() => {
+                window.location.href = '/';
+            }}>
+                <img className='Button-img' src={arrow} alt="Arrow"/>
+                <div className='Button-text'>{translations.backToHome}</div>
+                <div className={'Button-underLine'} />
+            </button>
+        </div>
     );
 }
- 
+
 export default BackToHome;
