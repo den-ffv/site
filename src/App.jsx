@@ -29,6 +29,36 @@ function App() {
     localStorage.getItem('language'),
   );
 
+  
+  const [showPolicy, setShowPolicy] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+
+
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#policy-anchor') {
+        setShowPolicy(true);
+        setShowContact(false);
+      } else if (window.location.hash === '#contact-anchor'){
+        setShowPolicy(false);
+        setShowContact(true);
+      } else {
+        setShowPolicy(false);
+        setShowContact(false);
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
+
   window.localStorage.setItem(
     'language',
     currentLanguage == null ? 'ua' : currentLanguage,
@@ -117,32 +147,6 @@ function App() {
     );
   }
 
-  const [showPolicy, setShowPolicy] = useState(false);
-  const [showContact, setShowContact] = useState(false);
-
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      if (window.location.hash === '#policy-anchor') {
-        setShowPolicy(true);
-        setShowContact(false);
-      } else if (window.location.hash === '#contact-anchor'){
-        setShowPolicy(false);
-        setShowContact(true);
-      } else {
-        setShowPolicy(false);
-        setShowContact(false);
-      }
-    };
-
-    handleHashChange();
-
-    window.addEventListener('hashchange', handleHashChange);
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, []);
 
   return (
     <div className="container">
