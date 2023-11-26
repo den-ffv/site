@@ -1,0 +1,61 @@
+/* Policy.scss */
+@import '../../variables.scss';
+
+
+//длина окна 3 925пх
+//футер 145пъ
+.policy {
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background: url('../../assets/png/NotFound-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.policy__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 56px;
+    width: 780px;
+    margin: 88px 0px 98px 0px;
+}
+
+.policy__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 56px;
+    .policy__text-link {
+        color: #00E;
+    }
+    .policy__text-point {
+
+        p.main__information {
+            margin-top: 32px;
+        }
+    }
+}
+
+//tablet
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .policy__container {
+        width: 688px;
+    }
+}
+
+//mobile
+
+@media screen and (max-width: $mobile_width) {
+    .policy {
+        font-size: 14px;
+    }
+    .policy__container {
+        width: 260px;
+    }
+}

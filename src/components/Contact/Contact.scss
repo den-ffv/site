@@ -1,0 +1,166 @@
+@import '../../variables.scss';
+
+.Contact {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Contact__content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 920px;
+        height: 359px;
+        margin: 100px 390px 100px 130px;
+    }
+    .Contact__title{
+        padding-bottom: 54px;
+        h2{
+            font-size: $h2_size;
+            line-height: $h2_height;
+        }
+    }
+}
+
+.Contact__block{
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+
+    .Contact__links{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 320px;
+        height: 102px;
+
+        h4 {
+            font-size: $subtitle_size;
+            line-height: $subtitle_height;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 55px;
+            width: 320px;
+            height: 40px;
+
+            .social-link{
+                display: flex;
+                align-items: center;
+                margin: 0;
+            }
+
+            .footer__social-img {
+                width: 40px;
+                height: 40px;
+                margin: 0;
+            }
+        }
+    }
+
+    .Contact__location {
+        padding-bottom: 56px;
+        h4 {
+            font-size: $subtitle_size;
+            line-height: $subtitle_height;
+            padding-bottom: 32px;
+        }
+    }
+}
+
+.Contact__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 204px;
+    padding: 37px 38px;
+    margin: 0px 266px 100px 273px;
+    border: 1px solid $basic-color_500;
+    background-color: $basic-color_500;
+    width: 901px;
+    height: 140px;
+    h3 {
+        color: $light_color;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 60px;
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden !important;
+        position: relative !important;
+        background-color: $light_color;
+        width: 229px;
+        height: 66px;
+    }
+
+    a {
+        color: $dark_color;
+    }
+
+    .Contact__red-text {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: 406px;
+        height: 60px;
+    }
+}
+
+.Contact__joinTeam__join {
+    display: flex;
+
+    &-button-link {
+        text-align: center;
+        background: transparent;
+        cursor: pointer;
+        color: $red-1;
+        font-size: $subtitle_size;
+        font-weight: bold;
+        line-height: $subtitle_size;
+        text-decoration: none;
+
+        &:hover {
+            color: $basic-color_500;
+            transition: 0.4s;
+        }
+
+        &:active {
+            color: $basic-color_500;
+        }
+    
+        &:disabled {            
+            color: $grey-1;
+        }
+    }
+}
+
+.Contact__support {
+    display: flex;
+    flex-direction: column;
+    width: 222px;
+    height: 87px;
+
+    span {
+        padding-bottom: 32px;
+        h4{
+            font-size: $subtitle_size;
+            line-height: $subtitle_height;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: $dark_color;
+    }
+}

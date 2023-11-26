@@ -31,6 +31,13 @@ function Footer({ translations }) {
     { id: 4, icon: facebook, alt: 'facebook', href: '/' },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <footer className="footer" data-aos="fade-up" data-aos-duration="1000">
       <div className="footer__content main__container">
@@ -90,6 +97,7 @@ function Footer({ translations }) {
                     <a
                       className="footer__content-link"
                       href={linkItemsFooterContact.href}
+                      onClick={scrollToTop}
                     >
                       {linkItemsFooterContact.value}
                     </a>

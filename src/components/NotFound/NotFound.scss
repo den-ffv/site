@@ -2,6 +2,8 @@
 
 .NotFound {
     min-height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
     background: url('../../assets/png/NotFound-bg.png');
     background-size: cover;
     background-position: center;
@@ -31,8 +33,20 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .NotFound {
         padding: 88px 0px 0px 0px;
-        // height: 817px;
         min-height: 100vh;
+        max-height: 903px;
+    }
+    .NotFound-img {
+        width: 622px;
+        height: 265px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .NotFound {
+        padding: 88px 0px 52px 0px;
+        min-height: 100vh;
+        max-height: 903px;
     }
     .NotFound-img {
         width: 622px;
@@ -42,6 +56,10 @@
 
 //mobile
 @media screen and (max-width: $mobile_width) {
+    .NotFound{
+        height: 593px;
+        padding-bottom: 0px;
+    }
     .NotFound-title {
         width: 260px;
         height: 60px;

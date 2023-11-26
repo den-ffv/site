@@ -117,6 +117,33 @@ function App() {
     );
   }
 
+  const [showPolicy, setShowPolicy] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#policy-anchor') {
+        setShowPolicy(true);
+        setShowContact(false);
+      } else if (window.location.hash === '#contact-anchor'){
+        setShowPolicy(false);
+        setShowContact(true);
+      } else {
+        setShowPolicy(false);
+        setShowContact(false);
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   return (
     <div className="container">
       <ScrollToTopButton />
@@ -125,30 +152,40 @@ function App() {
         setCurrentLanguage={setCurrentLanguage}
         translations={translations}
       />
-      <div className="main">
-        <div className="main__container">
-          <InitialBlockSection translations={translations} />
-          {dataAboutSection.map((data) => (
-            <AboutSection
-              translations={translations}
-              key={data.id}
-              revers={data.revers}
-              mainCard={data.mainCard}
-              numberOfComponents={data.numOfCompon}
-              textInComponentAbout={data.text}
-              icon={data.icon}
-              image={data.image}
-            />
-          ))}
-          <Title titleText={translations.sliderTitle} />
-          <Sliders images={images} translations={translations} />
-        </div>
-      </div>
-      <LeaderParty translations={translations} />
-      <div className="main__container">
-        <SocialMedia translations={translations} />
-        <JoinToTeam translations={translations} />
-      </div>
+      <>
+        {showPolicy ? (
+            <Policy translations={translations} />
+            ) : showContact ? (
+            <Contact translations={translations} />
+          ) : (
+        <>
+          <div className="main"> 
+            <div className="main__container">
+              <InitialBlockSection translations={translations} />
+              {dataAboutSection.map((data) => (
+                <AboutSection
+                  translations={translations}
+                  key={data.id}
+                  revers={data.revers}
+                  mainCard={data.mainCard}
+                  numberOfComponents={data.numOfCompon}
+                  textInComponentAbout={data.text}
+                  icon={data.icon}
+                  image={data.image}
+                />
+              ))}
+              <Title titleText={translations.sliderTitle} />
+              <Sliders images={images} translations={translations} />
+            </div>
+          </div>
+          <LeaderParty translations={translations} />
+          <div className="main__container">
+            <SocialMedia translations={translations} />
+            <JoinToTeam translations={translations} />
+          </div>
+        </>
+        )}
+      </>
       <Footer translations={translations} />
     </div>
   );
