@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logoUa from '../../assets/svg/logoUa.svg';
 import logoEn from '../../assets/svg/logoEn.svg';
 import telegram from '../../assets/svg/telegram.svg';
@@ -7,8 +7,9 @@ import tiktok from '../../assets/svg/tiktok.svg';
 import facebook from '../../assets/svg/facebook.svg';
 
 import './Footer.scss';
+import { LangContext } from '../../App';
 
-function Footer({ translations }) {
+function Footer() {
   const itemsSocialNetworks = [
     {
       id: 1,
@@ -37,6 +38,8 @@ function Footer({ translations }) {
       behavior: 'smooth',
     });
   };
+
+  const translations = useContext(LangContext)
 
   return (
     <footer className="footer" data-aos="fade-up" data-aos-duration="1000">

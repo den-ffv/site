@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Policy.scss';
+import { LangContext } from '../../App';
 
 
 
-function Policy({ translations }) {
+function Policy() {
+
+  const translations = useContext(LangContext)
 
   return (
     <div 

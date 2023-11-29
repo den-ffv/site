@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import '../Contact/Contact.scss';
 import telegram from '../../assets/svg/telegram-red.svg';
 import instagram from '../../assets/svg/instagram-red.svg';
 import tiktok from '../../assets/svg/tik-tok-red.svg';
 import facebook from '../../assets/svg/facebook-red.svg';
+import { LangContext } from '../../App';
 
-function Contact({ translations }) {
+function Contact() {
   const [shouldShake, setShouldShake] = useState(false);
+
+  const translations = useContext(LangContext)
 
   useEffect(() => {
     const interval = setInterval(() => {

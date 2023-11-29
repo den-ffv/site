@@ -1,7 +1,7 @@
 import React, { lazy,Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 
-const App = lazy(async () => {
+const WrappedApp = lazy(async () => {
     return Promise.all([
       import('./App.jsx'),
       new Promise(resolve => setTimeout(resolve, 1500))
@@ -14,6 +14,6 @@ import { Loader } from './utils/loader/Loader.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <Suspense fallback={<Loader/>}>
-        <App />
+       <WrappedApp/>
     </Suspense>
 )

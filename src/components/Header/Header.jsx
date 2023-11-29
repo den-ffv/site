@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Menu from '../Menu/Menu';
 import logoUa from '../../assets/svg/logoUa.svg';
 import logoEn from '../../assets/svg/logoEn.svg';
 import './Header.scss';
+import { LangContext } from '../../App';
 
-function Header({ currentLanguage, setCurrentLanguage, translations }) {
+function Header({ currentLanguage, setCurrentLanguage }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const translations = useContext(LangContext)
 
   if (isOpen) {
     document.body.style.overflow = 'hidden';

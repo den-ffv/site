@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './AboutSection.scss';
 import FotoCart from './FotoCard/FotoCard';
 import BigFotoCatd from './BigFotoCatd/BigFotoCatd';
+import { LangContext } from '../../App';
 
-function AboutSection({ translations,revers, mainCard, numberOfComponents, textInComponentAbout, icon, image }) {
+function AboutSection({revers, mainCard, numberOfComponents, textInComponentAbout, icon, image }) {
+
   const fotoCardComponents = [];
+
+  const translations = useContext(LangContext)
 
   if (image && image.length > 0){
     image.forEach((foto, index) => {

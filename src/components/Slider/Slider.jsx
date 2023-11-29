@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { TransitionGroup } from 'react-transition-group';
 import './Slider.scss';
 import SliderItem from '../SliderItem/SliderItem';
 import arrowIcon from '/arrow.svg';
+import { LangContext } from '../../App';
 
-function Sliders({ images, translations }) {
+function Sliders({ images}) {
   const [active, setActive] = useState(0);
   const [direction, setDirection] = useState('');
   let touchStartX = null;
+
+  const translations = useContext(LangContext)
 
   useEffect(() => {
     const interval = setInterval(() => {

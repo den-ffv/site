@@ -3,8 +3,11 @@ import '../../components/BackToHome/BackToHome.jsx';
 
 import notfound from '../../assets/png/NotFound.png';
 import BackToHome from '../BackToHome/BackToHome';
+import { LangContext } from '../../App.jsx';
+import { useContext } from 'react';
 
-function NotFound({ translations }) {
+function NotFound() {
+    const translations = useContext(LangContext)
     return (
         <section className='NotFound'>
             <div className='NotFound__wrapper'>

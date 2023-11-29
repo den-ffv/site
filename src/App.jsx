@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import englishTranslations from './language/englishTranslations';
 import ukrainianTranslations from './language/ukrainianTranslations';
@@ -14,7 +14,7 @@ import SocialMedia from './components/SocialMedia/SocialMedia';
 import LeaderParty from './components/LeaderParty/LeaderParty';
 import InitialBlockSection from './components/InitialBlockSection/InitialBlockSection';
 import AboutSection from './components/AboutSection/AboutSection';
-import Policy from './components/Policy/Policy'; 
+import Policy from './components/Policy/Policy';
 import NotFound from './components/NotFound/NotFound';
 import Contact from './components/Contact/Contact';
 
@@ -24,50 +24,17 @@ import icon2 from '/icon/icon2.svg';
 import icon3 from '/icon/icon3.svg';
 import icon4 from '/icon/icon4.svg';
 
-function App() {
+export const LangContext = React.createContext();
+
+const WrappedApp = () => {
   const [currentLanguage, setCurrentLanguage] = useState(
     localStorage.getItem('language'),
   );
-
-  
-  const [showPolicy, setShowPolicy] = useState(false);
-  const [showContact, setShowContact] = useState(false);
-
-
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      if (window.location.hash === '#policy-anchor') {
-        setShowPolicy(true);
-        setShowContact(false);
-      } else if (window.location.hash === '#contact-anchor'){
-        setShowPolicy(false);
-        setShowContact(true);
-      } else {
-        setShowPolicy(false);
-        setShowContact(false);
-      }
-    };
-
-    handleHashChange();
-
-    window.addEventListener('hashchange', handleHashChange);
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, []);
-
 
   window.localStorage.setItem(
     'language',
     currentLanguage == null ? 'ua' : currentLanguage,
   );
-
-  const translations =
-    localStorage.getItem('language') === 'ua'
-      ? ukrainianTranslations
-      : englishTranslations;
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language');
@@ -78,6 +45,11 @@ function App() {
           : 'ГО «Молодіжний демократичний альянс за реформи»';
     }
   }, [currentLanguage]);
+
+  const translations =
+    localStorage.getItem('language') === 'ua'
+      ? ukrainianTranslations
+      : englishTranslations;
 
 
   const images = [
@@ -131,21 +103,62 @@ function App() {
     },
   ];
 
+
+  return (
+    <LangContext.Provider value={translations}>
+      <App images={images} dataAboutSection={dataAboutSection} currentLanguage={currentLanguage} setCurrentLanguage={setCurrentLanguage} />
+    </LangContext.Provider>
+  )
+}
+
+
+const App = React.memo((props) => {
+
+  const [showPolicy, setShowPolicy] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+
+  const { images, dataAboutSection, currentLanguage, setCurrentLanguage } = props;
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#policy-anchor') {
+        setShowPolicy(true);
+        setShowContact(false);
+      } else if (window.location.hash === '#contact-anchor') {
+        setShowPolicy(false);
+        setShowContact(true);
+      } else {
+        setShowPolicy(false);
+        setShowContact(false);
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   const currentPath = window.location.pathname;
+
   if (currentPath !== '/' && currentPath !== '/NotFound') {
     return (
       <div>
         <Header
           currentLanguage={currentLanguage}
           setCurrentLanguage={setCurrentLanguage}
-          translations={translations}
         />
-        <NotFound translations={translations}/>
-        <Footer translations={translations} />
+        <NotFound />
+        <Footer/>
       </div>
-      
+
     );
   }
+
+  const translations = useContext(LangContext)
 
 
   return (
@@ -154,47 +167,45 @@ function App() {
       <Header
         currentLanguage={currentLanguage}
         setCurrentLanguage={setCurrentLanguage}
-        translations={translations}
       />
       <>
         {showPolicy ? (
-            <Policy translations={translations} />
-            ) : showContact ? (
-            <Contact translations={translations} />
-          ) : (
-        <>
-          <div className="main"> 
-            <div className="main__container">
-              <InitialBlockSection translations={translations} />
-              {dataAboutSection.map((data) => (
-                <AboutSection
-                  translations={translations}
-                  key={data.id}
-                  revers={data.revers}
-                  mainCard={data.mainCard}
-                  numberOfComponents={data.numOfCompon}
-                  textInComponentAbout={data.text}
-                  icon={data.icon}
-                  image={data.image}
-                />
-              ))}
-              <Title titleText={translations.sliderTitle} />
-              <Sliders images={images} translations={translations} />
+          <Policy  />
+        ) : showContact ? (
+          <Contact  />
+        ) : (
+          <>
+            <div className="main">
+              <div className="main__container">
+                <InitialBlockSection />
+                {dataAboutSection.map((data) => (
+                  <AboutSection
+                    key={data.id}
+                    revers={data.revers}
+                    mainCard={data.mainCard}
+                    numberOfComponents={data.numOfCompon}
+                    textInComponentAbout={data.text}
+                    icon={data.icon}
+                    image={data.image}
+                  />
+                ))}
+                <Title titleText={translations.sliderTitle} />
+                <Sliders images={images} />
+              </div>
             </div>
-          </div>
-          <LeaderParty translations={translations} />
-          <div className="main__container">
-            <SocialMedia translations={translations} />
-            <JoinToTeam translations={translations} />
-          </div>
-        </>
+            <LeaderParty />
+            <div className="main__container">
+              <SocialMedia />
+              <JoinToTeam />
+            </div>
+          </>
         )}
       </>
-      <Footer translations={translations} />
+      <Footer />
     </div>
   );
 
-  
-}
 
-export default App;
+})
+
+export default WrappedApp;
