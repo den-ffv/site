@@ -1,36 +1,12 @@
 import React, { useContext } from 'react';
 import logoUa from '../../assets/svg/logoUa.svg';
 import logoEn from '../../assets/svg/logoEn.svg';
-import telegram from '../../assets/svg/telegram.svg';
-import instagram from '../../assets/svg/instagram.svg';
-import tiktok from '../../assets/svg/tiktok.svg';
-import facebook from '../../assets/svg/facebook.svg';
 
 import './Footer.scss';
 import { LangContext } from '../../App';
+import { itemsSocialNetworks_Footer } from '../../constants/constants';
 
 function Footer() {
-  const itemsSocialNetworks = [
-    {
-      id: 1,
-      icon: telegram,
-      alt: 'telegram',
-      href: 'https://t.me/Polit_Molod2023',
-    },
-    {
-      id: 2,
-      icon: instagram,
-      alt: 'instagram',
-      href: 'https://instagram.com/polit_molod?igshid=MzRlODBiNWFlZA==',
-    },
-    {
-      id: 3,
-      icon: tiktok,
-      alt: 'tiktok',
-      href: 'https://www.tiktok.com/@polit_molod?_t=8gRdrufMjRe&_r=1',
-    },
-    { id: 4, icon: facebook, alt: 'facebook', href: '/' },
-  ];
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -38,6 +14,7 @@ function Footer() {
       behavior: 'smooth',
     });
   };
+
 
   const translations = useContext(LangContext)
 
@@ -112,7 +89,7 @@ function Footer() {
         </div>
         <div className="footer__wrapper">
           <div className="footer__social">
-            {itemsSocialNetworks.map((itemSM) => (
+            {itemsSocialNetworks_Footer.map((itemSM) => (
               <a
                 key={itemSM.id}
                 className="social-link"

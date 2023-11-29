@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 
-import englishTranslations from './language/englishTranslations';
-import ukrainianTranslations from './language/ukrainianTranslations';
+import englishTranslations from './constants/language/englishTranslations';
+import ukrainianTranslations from './constants/language/ukrainianTranslations';
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -17,12 +17,7 @@ import AboutSection from './components/AboutSection/AboutSection';
 import Policy from './components/Policy/Policy';
 import NotFound from './components/NotFound/NotFound';
 import Contact from './components/Contact/Contact';
-
-
-import icon1 from '/icon/icon.svg';
-import icon2 from '/icon/icon2.svg';
-import icon3 from '/icon/icon3.svg';
-import icon4 from '/icon/icon4.svg';
+import { dataAboutSectionFunc } from './constants/constants';
 
 export const LangContext = React.createContext();
 
@@ -52,61 +47,9 @@ const WrappedApp = () => {
       : englishTranslations;
 
 
-  const images = [
-    '/IMG_5.png',
-    '/IMG_2.png',
-    '/IMG_3.png',
-    '/IMG_4.png',
-    '/IMG_1.png',
-  ];
-
-  const dataAboutSection = [
-    {
-      id: 1,
-      revers: false,
-      mainCard: true,
-      numOfCompon: 1,
-      text: translations.aboutText1,
-      icon: icon1,
-      image: [{ id: 1, img: '/foto_1.png' }],
-    },
-    {
-      id: 2,
-      revers: true,
-      mainCard: false,
-      numOfCompon: 3,
-      text: translations.aboutText2,
-      icon: icon2,
-      image: [
-        { id: 2, img: '/foto_4.png' },
-        { id: 3, img: '/foto_5.png' },
-        { id: 4, img: '/foto_2.png' },
-      ],
-    },
-    {
-      id: 3,
-      revers: false,
-      mainCard: false,
-      numOfCompon: 1,
-      text: translations.aboutText3,
-      icon: icon3,
-      image: [{ id: 5, img: '/foto_3.png' }],
-    },
-    {
-      id: 4,
-      revers: true,
-      mainCard: false,
-      numOfCompon: 1,
-      text: translations.aboutText4,
-      icon: icon4,
-      image: [{ id: 6, img: '/foto_6.png' }],
-    },
-  ];
-
-
   return (
     <LangContext.Provider value={translations}>
-      <App images={images} dataAboutSection={dataAboutSection} currentLanguage={currentLanguage} setCurrentLanguage={setCurrentLanguage} />
+      <App currentLanguage={currentLanguage} setCurrentLanguage={setCurrentLanguage} />
     </LangContext.Provider>
   )
 }
@@ -117,7 +60,7 @@ const App = React.memo((props) => {
   const [showPolicy, setShowPolicy] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
-  const { images, dataAboutSection, currentLanguage, setCurrentLanguage } = props;
+  const {currentLanguage, setCurrentLanguage } = props;
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -160,6 +103,7 @@ const App = React.memo((props) => {
 
   const translations = useContext(LangContext)
 
+  const dataAboutSection = dataAboutSectionFunc(translations)
 
   return (
     <div className="container">
@@ -190,7 +134,7 @@ const App = React.memo((props) => {
                   />
                 ))}
                 <Title titleText={translations.sliderTitle} />
-                <Sliders images={images} />
+                <Sliders />
               </div>
             </div>
             <LeaderParty />

@@ -5,10 +5,15 @@ import SliderItem from '../SliderItem/SliderItem';
 import arrowIcon from '/arrow.svg';
 import { LangContext } from '../../App';
 
-function Sliders({ images}) {
+import { images } from '../../constants/constants';
+
+function Sliders() {
+  
   const [active, setActive] = useState(0);
   const [direction, setDirection] = useState('');
   let touchStartX = null;
+
+  
 
   const translations = useContext(LangContext)
 

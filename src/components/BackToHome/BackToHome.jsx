@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import './BackToHome.scss'
 import arrow from '../../assets/png/btnToHome.png';
+import { LangContext } from '../../App';
 
-function BackToHome ({ translations }) {
+function BackToHome () {
 
+   const translations = useContext(LangContext) 
     return (
         <div className='Frame'>
             <button 

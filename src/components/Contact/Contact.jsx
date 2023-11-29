@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import '../Contact/Contact.scss';
-import telegram from '../../assets/svg/telegram-red.svg';
-import instagram from '../../assets/svg/instagram-red.svg';
-import tiktok from '../../assets/svg/tik-tok-red.svg';
-import facebook from '../../assets/svg/facebook-red.svg';
 import { LangContext } from '../../App';
+import { itemsSocialNetworks_ContactPage } from '../../constants/constants';
+
+
 
 function Contact() {
   const [shouldShake, setShouldShake] = useState(false);
@@ -18,31 +17,7 @@ function Contact() {
 
     return () => clearInterval(interval);
   }, []);
-
-  const itemsSocialNetworks = [
-    {
-      id: 1,
-      icon: telegram,
-      alt: 'telegram',
-      href: 'https://t.me/Polit_Molod2023',
-    },
-    {
-      id: 2,
-      icon: instagram,
-      alt: 'instagram',
-      href: 'https://instagram.com/polit_molod?igshid=MzRlODBiNWFlZA==',
-    },
-    {
-      id: 3,
-      icon: tiktok,
-      alt: 'tiktok',
-      href: 'https://www.tiktok.com/@polit_molod?_t=8gRdrufMjRe&_r=1',
-    },
-    { id: 4, icon: facebook, alt: 'facebook', href: '/' },
-  ];
-
-
-
+  
   return (
     <section className="Contact" id="contact-anchor">
       <div className="Contact__wrapper">
@@ -64,7 +39,7 @@ function Contact() {
             <div className="Contact__links">
             <h4>{translations.LinksText}</h4>
               <ul>
-                {itemsSocialNetworks.map((itemSM) => (
+                {itemsSocialNetworks_ContactPage.map((itemSM) => (
                   <a
                     key={itemSM.id}
                     className="social-link"
