@@ -14,6 +14,14 @@ const englishTranslations = {
     },
   ],
 
+  linkButtonContact: [
+    {
+      id: 1,
+      value: 'JOIN',
+      href: 'https://docs.google.com/forms/d/1m9dcgUMTz4Ze6HTzRzySH7Ivg6-Gk1Y4F8deZZlsB2c/viewform?edit_requested=true&pli=1',
+    },
+  ],
+
   // About Section
   aboutText: [
     {
@@ -149,8 +157,8 @@ const englishTranslations = {
     { id: 5, value: 'Video material', href: '/' },
   ],
   linkItemsFooterContact: [
-    { id: 1, value: 'Contact', href: '#Contact-form' },
-    { id: 2, value: 'Privacy Policy', href: '/' },
+    { id: 1, value: 'Contact', href: '#contact-anchor' },
+    { id: 2, value: 'Privacy Policy', href: '#policy-anchor' },
   ],
 
   copyRight: 'Copyright © 2023 MDAR',

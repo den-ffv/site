@@ -13,10 +13,10 @@ const ukrainianTranslations = {
       href: 'https://docs.google.com/forms/d/1m9dcgUMTz4Ze6HTzRzySH7Ivg6-Gk1Y4F8deZZlsB2c/viewform?edit_requested=true&pli=1',
     },
   ],
-  linkButtonbox: [
+  linkButtonContact: [
     {
       id: 1,
-      value: 'Долучитися',
+      value: 'ДОЛУЧИТИСЯ',
       href: 'https://docs.google.com/forms/d/1m9dcgUMTz4Ze6HTzRzySH7Ivg6-Gk1Y4F8deZZlsB2c/viewform?edit_requested=true&pli=1',
     },
   ],

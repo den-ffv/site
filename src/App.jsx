@@ -64,10 +64,10 @@ const App = React.memo((props) => {
 
   useEffect(() => {
     const handleHashChange = () => {
-      if (window.location.hash === '#policy-anchor') {
+      if (window.location.hash === "#policy-anchor") {
         setShowPolicy(true);
         setShowContact(false);
-      } else if (window.location.hash === '#contact-anchor') {
+      } else if (window.location.hash === "#contact-anchor") {
         setShowPolicy(false);
         setShowContact(true);
       } else {
@@ -78,23 +78,27 @@ const App = React.memo((props) => {
 
     handleHashChange();
 
-    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener("hashchange", handleHashChange);
 
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
 
   const currentPath = window.location.pathname;
 
-  if (currentPath !== '/' && currentPath !== '/NotFound') {
+  if (currentPath !== "/" && currentPath !== "/NotFound") {
     return (
-      <div>
+      <div className="container">
         <Header
           currentLanguage={currentLanguage}
           setCurrentLanguage={setCurrentLanguage}
         />
-        <NotFound />
+        <div className="main-404">
+          <div className="main-404__container">
+            <NotFound />
+          </div>
+        </div>
         <Footer/>
       </div>
 
@@ -114,9 +118,15 @@ const App = React.memo((props) => {
       />
       <>
         {showPolicy ? (
-          <Policy  />
+          <div className="main">
+            <Policy  />
+          </div>
         ) : showContact ? (
-          <Contact  />
+          <div className="main-404">
+            <div className="main-404__container-contact">
+              <Contact  />
+            </div>
+          </div>
         ) : (
           <>
             <div className="main">

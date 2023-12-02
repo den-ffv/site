@@ -20,7 +20,7 @@ function Contact() {
   
   return (
     <section className="Contact" id="contact-anchor">
-      <div className="Contact__wrapper">
+      
         <div className="Contact__content">
           <div className="Contact__title">
             <b>
@@ -31,10 +31,12 @@ function Contact() {
           </div>
           <div className="Contact__block">
             <div className="Contact__location">
-              <h4>
-                {translations.location_1}
-              </h4>
-              {translations.location_2}
+              <h4>{translations.location_1}</h4>
+              <p>{translations.location_2}</p>
+              <div className="Contact__support">
+                <h4>{translations.linkItemsContactSupport}</h4>
+                <a href="mailto:info@udar.party">info@udar.party</a>
+              </div>
             </div>
             <div className="Contact__links">
             <h4>{translations.LinksText}</h4>
@@ -57,32 +59,27 @@ function Contact() {
               </ul>
             </div>
           </div>
-          <div className="Contact__support">
-            <span><h4>{translations.linkItemsContactSupport}</h4></span>
-            <a href="mailto:info@udar.party">info@udar.party</a>
-          </div>
         </div>
         <div className="Contact__box">
             <span className="Contact__red-text">
               <h3>{translations.boxContactText}</h3>
+              <div>
+                {translations.linkButtonContact.map((linkButtonContact) => (
+                  <a
+                    className={`Contact__joinTeam__join-button-link ${
+                      shouldShake ? 'shake' : ''
+                    }`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={linkButtonContact.id}
+                    href={linkButtonContact.href}
+                  >
+                    {linkButtonContact.value}
+                  </a>
+                ))}
+              </div>
             </span>
-            <div>
-              {translations.linkButtonbox.map((linkButton) => (
-                <a
-                  className={`Contact__joinTeam__join-button-link ${
-                    shouldShake ? 'shake' : ''
-                  }`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={linkButton.id}
-                  href={linkButton.href}
-                >
-                  {linkButton.value}
-                </a>
-              ))}
-            </div>
           </div>
-      </div>
     </section>
   );
 }

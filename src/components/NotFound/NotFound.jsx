@@ -11,7 +11,7 @@ function NotFound() {
     return (
         <section className='NotFound'>
             <div className='NotFound__wrapper'>
-                <h2 className='NotFound-title' data-aos='zoom-in' >{translations.titleNotFound}</h2>
+                <h3 className='NotFound-title' data-aos='zoom-in' >{translations.titleNotFound}</h3>
                 <div className='NotFound-img' data-aos='zoom-in' >                    
                     <img className='img' src={notfound} alt="404" />
                 </div>

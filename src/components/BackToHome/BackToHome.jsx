@@ -5,20 +5,21 @@ import { LangContext } from '../../App';
 
 function BackToHome () {
 
-   const translations = useContext(LangContext) 
-    return (
-        <div className='Frame'>
-            <button 
-            className='Button'
-            onClick={() => {
-                window.location.href = '/';
-            }}>
-                <img className='Button-img' src={arrow} alt="Arrow"/>
-                <div className='Button-text'>{translations.backToHome}</div>
-                <div className={'Button-underLine'} />
-            </button>
-        </div>
-    );
+    const translations = useContext(LangContext) 
+        return (
+            <div className='Frame'>
+                <button 
+                className='Button'
+                onClick={() => {
+                    window.location.href = '/';
+                }}>
+                    <div className='Button-text'>
+                        <img className='Button-img' src={arrow} alt="Arrow"/>
+                        {translations.backToHome}
+                    </div>
+                </button>
+            </div>
+        );
 }
 
 export default BackToHome;

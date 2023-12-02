@@ -1,166 +1,274 @@
 @import '../../variables.scss';
 
+
 .Contact {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .Contact__content {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-        width: 920px;
-        height: 359px;
-        margin: 100px 390px 100px 130px;
-    }
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    
     .Contact__title{
-        padding-bottom: 54px;
         h2{
-            font-size: $h2_size;
-            line-height: $h2_height;
+        font-size: $h2_size;
+        line-height: $h2_height;
         }
     }
-}
-
-.Contact__block{
-    display: flex;
-    flex-direction: row;
-    gap: 120px;
-
-    .Contact__links{
+    
+    .Contact__support {
         display: flex;
         flex-direction: column;
-        gap: 32px;
-        width: 320px;
-        height: 102px;
-
-        h4 {
-            font-size: $subtitle_size;
-            line-height: $subtitle_height;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 55px;
-            width: 320px;
-            height: 40px;
-
-            .social-link{
-                display: flex;
-                align-items: center;
-                margin: 0;
+        width: 222px;
+        height: 87px;
+        span {
+            h4{
+                font-size: $subtitle_size;
+                line-height: $subtitle_height;
             }
-
-            .footer__social-img {
-                width: 40px;
-                height: 40px;
-                margin: 0;
-            }
-        }
-    }
-
-    .Contact__location {
-        padding-bottom: 56px;
-        h4 {
-            font-size: $subtitle_size;
-            line-height: $subtitle_height;
-            padding-bottom: 32px;
-        }
-    }
-}
-
-.Contact__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 204px;
-    padding: 37px 38px;
-    margin: 0px 266px 100px 273px;
-    border: 1px solid $basic-color_500;
-    background-color: $basic-color_500;
-    width: 901px;
-    height: 140px;
-    h3 {
-        color: $light_color;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 35px;
-        line-height: 60px;
-    }
-
-    div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden !important;
-        position: relative !important;
-        background-color: $light_color;
-        width: 229px;
-        height: 66px;
-    }
-
-    a {
-        color: $dark_color;
-    }
-
-    .Contact__red-text {
-        display: flex;
-        align-self: center;
-        justify-content: center;
-        width: 406px;
-        height: 60px;
-    }
-}
-
-.Contact__joinTeam__join {
-    display: flex;
-
-    &-button-link {
-        text-align: center;
-        background: transparent;
-        cursor: pointer;
-        color: $red-1;
-        font-size: $subtitle_size;
-        font-weight: bold;
-        line-height: $subtitle_size;
-        text-decoration: none;
-
-        &:hover {
-            color: $basic-color_500;
-            transition: 0.4s;
-        }
-
-        &:active {
-            color: $basic-color_500;
         }
     
-        &:disabled {            
+        a{
+            text-decoration: none;
+            color: $dark_color;
+            font-size: 18px;
+        }
+    }
+    .Contact__content {
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+        left: 130px;
+        top: 215px;
+        margin: 100px;
+        // margin: 100px 360px 0px 100px;
+
+        .Contact__title{
+            h2{
+                font-size: $h2_size;
+                line-height: $h2_height;
+            }
+        }
+
+        .Contact__support {
+            display: flex;
+            flex-direction: column;
+            span {
+                h4{
+                    font-size: $subtitle_size;
+                    line-height: $subtitle_height;
+                }
+            }
+        
+            a{
+                text-decoration: none;
+                color: $dark_color;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .Contact__block{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 120px;
+
+        .Contact__links{
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+    
+            h4 {
+                font-size: $subtitle_size;
+                line-height: $subtitle_height;
+            }
+    
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 55px;
+                width: 320px;
+                height: 40px;
+    
+                .social-link{
+                    display: flex;
+                    align-items: center;
+                    margin: 0;
+                }
+    
+                .footer__social-img {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0;
+                }
+            }
+        }
+    
+        .Contact__location {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            gap: 32px;
+            h4 {
+                font-size: $subtitle_size;
+                line-height: $subtitle_height;
+            }
+        }
+    }
+    
+    .Contact__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 100px;
+        
+        span{
+            padding: 37px 38px;
+            gap: 204px;
+            border: 1px solid $basic-color_500;
+            background-color: $basic-color_500;
+        }
+
+        h3 {
+            color: $light_color;
+            font-style: normal;
+            font-size: 34px;
+            line-height: 60px;
+        }
+    
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $light_color;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+            border: 2px solid $basic-color_500;
             color: $grey-1;
         }
-    }
-}
+    
+        a {
+            color: $dark_color;
+        }
+    
+        .Contact__red-text {
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
 
-.Contact__support {
-    display: flex;
-    flex-direction: column;
-    width: 222px;
-    height: 87px;
+        .Contact__joinTeam__join {
+            display: flex;
 
-    span {
-        padding-bottom: 32px;
-        h4{
-            font-size: $subtitle_size;
-            line-height: $subtitle_height;
+            &-button-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent;
+                cursor: pointer;
+                font-size: $subtitle_size;
+                font-weight: bold;
+                line-height: $subtitle_size;
+                text-decoration: none;
+                padding: 18px 32px;
+        
+                &:hover {
+                    color: $basic-color_500;
+                    transition: 0.4s;
+                }
+        
+                &:active {
+                    color: $basic-color_500;
+                }
+            
+                &:disabled {            
+                    color: $grey-1;
+                }
+            }
         }
     }
+    
+    
 
-    a{
-        text-decoration: none;
-        color: $dark_color;
+}
+
+
+//tablet
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .Contact {
+        gap: 46px;
+        .Contact__content {
+            gap: 54px;
+            margin: 45px 0px 32px 0px;
+        }
+
+        .Contact__block {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            .Contact__support {
+                gap: 32px;
+            }
+        }
+
+        .Contact__box{
+            padding: 0;
+            margin-bottom: 35px;
+            .Contact__red-text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 16px;
+                align-items: center;
+            }
+            
+            span {
+                padding: 24px 90px;
+            }
+    
+            h3 {
+                font-size: 36px;
+            }
+        }
     }
+    
+}
+
+//mobile
+
+@media screen and (max-width: 768px) {
+    .Contact {
+        padding: 0 20px;
+        gap: 46px;
+        .Contact__content {
+            gap: 54px;
+            margin: 32px 0px;
+        }
+
+        .Contact__block {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            .Contact__support {
+                gap: 32px;
+            }
+            .Contact__links {
+                width: 100%;
+                ul{
+                    width: 100%;
+                    gap: 47px;
+
+                    .footer__social-img {
+                        width: 30px;
+                        height: 30px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .Contact__box{
+            display: none;
+        }
+
+    }
+    
 }

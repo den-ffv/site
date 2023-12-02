@@ -4,26 +4,12 @@ $button-color: #4c4c4c;
 
 
 .Frame {
-    width: auto !important;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 
-    &:hover {
-        .Button-img {
-            filter: invert(30%);
-            transition: $transition;
-        }
-        .Button-text {
-            color: $button-color;
-            transition: $transition;
-        }
-
-        .Button-underLine {
-            background-color: $button-color;
-            transition: $transition;
-        }
-        transition: $transition;
-        transform: translateY(-5px);
-    }
 }
 .Button {
     display: flex;
@@ -31,22 +17,66 @@ $button-color: #4c4c4c;
     align-items: center;
     background: none;
     border: 0;
+    position: relative;
+    transition: all .5s;
     font-family: $font-falinl-base;
     font-size: $subtitle_size;
     line-height: $subtitle_height;
+    &:hover {
+        color: $button-color;
+
+        .Button-img{
+            filter: invert(30%);
+            transition: all .5s;
+        }
+
+        transition: all .5s;
+        transform: translateY(-5px);
+    }
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: $button-color;
+        height: 2px;
+    }
+    &:hover:after {
+        width: 100%;
+    }
+
+    &:hover {
+        transition: all .5s;
+    }
+    &:after {
+        transition: all .5s;
+    }
+    &:before {
+        transition: all .5s;
+    }
 }
 
 .Button-text {
-    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+
+    .Button-img {
+        width: 35px;
+        height: 35px;
+        padding: 10.573px 11.666px 10.208px 0px;
+        flex-shrink: 0; 
+    }
+    span {
+        margin: 4px 0px 1px 0px;
+    }
 }
 
-
-.Button-img {
-    width: 35px;
-    height: 35px;
-    padding: 10.573px 6.197px 10.208px 5.469px;
-    flex-shrink: 0; 
-}
 
 .Button-underLine {
     background-color: $dark_color;
@@ -55,4 +85,24 @@ $button-color: #4c4c4c;
     position: absolute;
     top: 40px;
     width: 100%;
-}  
+}
+
+//mobile
+
+@media screen and (max-width: 768px) {
+    .Button-img {
+        width: 25px;
+        height: 25px;
+        padding: 7.573px 8.666px 7.208px 0px;
+    }
+    
+    .Button-text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    
+    .Button-underLine {
+        top: 28px;
+    }
+}
