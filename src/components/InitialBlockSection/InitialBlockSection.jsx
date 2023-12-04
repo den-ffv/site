@@ -39,7 +39,7 @@ function InitialBlockSection() {
           </a>
         ))}
       </div>
-      <div className="initial-block__image-contaiter">
+      <div className="initial-block__image-container">
         <img
           className="initial-block__image"
           data-aos="fade-left"

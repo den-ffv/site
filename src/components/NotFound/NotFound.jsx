@@ -11,11 +11,11 @@ function NotFound() {
     return (
         <section className='NotFound'>
             <div className='NotFound__wrapper'>
-                <h3 className='NotFound-title' data-aos='zoom-in' >{translations.titleNotFound}</h3>
-                <div className='NotFound-img' data-aos='zoom-in' >                    
-                    <img className='img' src={notfound} alt="404" />
+                <h3 className='NotFound__title' data-aos='zoom-in' >{translations.titleNotFound}</h3>
+                <div className='NotFound__img' data-aos='zoom-in' >                    
+                    <img className='NotFound__img-img' src={notfound} alt="404" />
                 </div>
-                <div className='NotFound-button' data-aos='zoom-out-up' >
+                <div className='NotFound__button' data-aos='zoom-out-up' >
                     <BackToHome translations={translations}/>
                 </div>
             </div>

@@ -10,33 +10,33 @@
     align-items: center;
     justify-content: center;
 
-    .policy__title {
+    &__title {
         font-size: 24px;
     }
-}
 
-.policy__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
-    width: 100%;
-    margin: 88px 290px 98px 290px;
-    padding: 0 20px;
-}
-
-.policy__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
-    .policy__text-link {
-        color: $basic-color_500;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+        margin: 88px 290px 98px 290px;
+        padding: 0 20px;
     }
-    .policy__text-point {
 
-        p.main__information {
-            margin-top: 16px;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        &-link {
+            color: $basic-color_500;
+        }
+        &-point {
+    
+            p.main__information {
+                margin-top: 16px;
+            }
         }
     }
 }
@@ -44,8 +44,10 @@
 //tablet
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .policy__container {
-        margin: 56px 92px;
+    .policy {
+        &__container {
+            margin: 56px 92px;
+        }
     }
 }
 
@@ -54,9 +56,9 @@
 @media screen and (max-width: $mobile_width) {
     .policy {
         font-size: 14px;
-    }
-    .policy__container {
-        margin: 32px 0;
-        padding: px 30px;
+        &__container {
+            margin: 32px 0;
+            padding: px 30px;
+        }
     }
 }

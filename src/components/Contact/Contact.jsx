@@ -35,7 +35,8 @@ function Contact() {
               <p>{translations.location_2}</p>
               <div className="Contact__support">
                 <h4>{translations.linkItemsContactSupport}</h4>
-                <a href="mailto:info@udar.party">info@udar.party</a>
+                <a href="mailto:Molodizkaudar@gmail.com">Molodizkaudar@gmail.com</a>
+                <a href="tel:+380973517753">+380 97 351 77 53</a>
               </div>
             </div>
             <div className="Contact__links">

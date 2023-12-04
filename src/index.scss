@@ -128,7 +128,12 @@ body {
     line-height: 28px;
     text-align: center;
   }
-
+  .main {
+    &__container{
+      max-width: $mobile_width;
+      margin: 0 auto;
+    }
+  }
   .main-404 {
     &__container{
       max-width: $mobile_width;

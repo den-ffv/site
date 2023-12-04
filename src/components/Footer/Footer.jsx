@@ -108,12 +108,12 @@ function Footer() {
 
           <div className="footer__mobile">
             <span>{translations.linkItemsFooterContactMobile}: </span>
-            <a href="tel:+380983803838">+380 98 380 38 38</a>
+            <a href="tel:+380973517753">+380 97 351 77 53</a>
           </div>
 
           <div className="footer__gmail">
             <span>{translations.linkItemsFooterContactEmail}: </span>
-            <a href="mailto:mdar_partiya@gmail.com">mdar_partiya.gmail</a>
+            <a href="mailto:Molodizkaudar@gmail.com">Molodizkaudar@gmail.com</a>
           </div>
         </div>
 

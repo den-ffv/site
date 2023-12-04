@@ -6,8 +6,8 @@
   justify-content: space-between;
   align-items: center;
   color: $dark_color;
-  margin: 100px 0px 50px 0px;
-  &__image-contaiter{
+  margin: 0px 0px 50px 0px;
+  &__image-container{
     position: relative;
   }
   &__image {
@@ -106,7 +106,7 @@
       line-height: 125%;
       margin: 50px 0px 50px 0px;
     }
-    &__image-contaiter {
+    &__image-container {
       max-width: 600px;
       overflow: hidden;
     }
@@ -162,8 +162,9 @@
 }
 
 @media screen and (max-width: 549px) {
-  .initial-block__image {
-    height: 400px;
-    left: 140px;
+  .initial-block {
+    &__link {
+      padding: 15px;
+    }
   }
 }

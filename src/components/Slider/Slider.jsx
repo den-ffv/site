@@ -97,30 +97,32 @@ function Sliders() {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
-      <div className="arrow arrow-left" onClick={moveLeft}>
-        <p className="fi-arrow-left">
-          <img src={arrowIcon} alt="arrow-icon" />
-        </p>
-      </div>
-      <TransitionGroup
-        className="slider__img-content"
-        childFactory={(child) =>
-          React.cloneElement(child, {
-            classNames: direction,
-          })
-        }
-      >
-        {generateItems()}
-      </TransitionGroup>
-      <div className="arrow arrow-right" onClick={moveRight}>
-        <p className="fi-arrow-right">
-          <img src={arrowIcon} alt="arrow-icon" />
-        </p>
-      </div>
-      <div className="dots">{renderDots()}</div>
-      <div className="slider-text t-hide">
-        <p>{translations.sliderText}</p>
-      </div>
+        <div className="arrow arrow-left" onClick={moveLeft}>
+          <p className="fi-arrow-left">
+            <img src={arrowIcon} alt="arrow-icon" />
+          </p>
+        </div>
+        <div className="slider__wrapper">
+          <TransitionGroup
+              className="slider__img-content"
+              childFactory={(child) =>
+                React.cloneElement(child, {
+                  classNames: direction,
+                })
+              }
+            >
+              {generateItems()}
+            </TransitionGroup>
+        </div>
+        <div className="arrow arrow-right" onClick={moveRight}>
+          <p className="fi-arrow-right">
+            <img src={arrowIcon} alt="arrow-icon" />
+          </p>
+        </div>
+        <div className="dots">{renderDots()}</div>
+        <div className="slider-text t-hide">
+          <p>{translations.sliderText}</p>
+        </div>
     </div>
   );
 }
