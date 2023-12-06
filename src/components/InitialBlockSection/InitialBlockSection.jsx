@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './InitialBlockSection.scss';
 
 import InitialBlockIcon from '/InitialBlockIcon.svg';
+import { LangContext } from '../../App';
 
-function InitialBlockSection({ translations }) {
+function InitialBlockSection() {
+
   const scrollToAnchor = (id) => {
     const element = document.getElementById(id);
     const headerHeight = document.querySelector('.header').offsetHeight;
@@ -15,6 +17,8 @@ function InitialBlockSection({ translations }) {
       behavior: 'smooth',
     });
   };
+
+  const translations = useContext(LangContext)
 
   return (
     <div className="initial-block" data-aos="fade-up" data-aos-duration="1000">
@@ -35,7 +39,7 @@ function InitialBlockSection({ translations }) {
           </a>
         ))}
       </div>
-      <div className="initial-block__image-contaiter">
+      <div className="initial-block__image-container">
         <img
           className="initial-block__image"
           data-aos="fade-left"

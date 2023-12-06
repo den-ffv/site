@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './LeaderParty.scss';
 
 import leader from '../../assets/png/leader.png';
 import instagram from '../../assets/svg/instagram.svg';
+import { LangContext } from '../../App';
 
-function LeaderParty({ translations }) {
+function LeaderParty() {
+  
+  const translations = useContext(LangContext)
+  
   return (
     <section className="leaderParty" id="leaderParty-anchor">
       <div className="leaderParty__wrapper">

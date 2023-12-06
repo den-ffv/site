@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './JoinToTeam.scss';
 import forms from '../../assets/png/forms.svg';
+import { LangContext } from '../../App';
 
-function JoinToTeam({ translations }) {
+function JoinToTeam() {
   const [shouldShake, setShouldShake] = useState(false);
+
+  const translations = useContext(LangContext)
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -125,7 +125,7 @@
 //tablet
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .footer {
-    padding: 0 16px;
+    padding: 23px 17px 32px 16px;
   }
 
   .social-link:not(:last-child) {
@@ -152,7 +152,7 @@
 //mobile
 @media screen and (max-width: $mobile_width) {
   .footer {
-    padding: 0 10px;
+    padding: 24px 10px 24px 10px;
   }
 
   .footer__content {

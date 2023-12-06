@@ -1,0 +1,64 @@
+/* Policy.scss */
+@import '../../variables.scss';
+
+.policy {
+    background: url('../../assets/png/NotFound-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        font-size: 24px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+        margin: 88px 290px 98px 290px;
+        padding: 0 20px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        &-link {
+            color: $basic-color_500;
+        }
+        &-point {
+    
+            p.main__information {
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+//tablet
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .policy {
+        &__container {
+            margin: 56px 92px;
+        }
+    }
+}
+
+//mobile
+
+@media screen and (max-width: $mobile_width) {
+    .policy {
+        font-size: 14px;
+        &__container {
+            margin: 32px 0;
+            padding: px 30px;
+        }
+    }
+}

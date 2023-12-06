@@ -1,13 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { TransitionGroup } from 'react-transition-group';
 import './Slider.scss';
 import SliderItem from '../SliderItem/SliderItem';
 import arrowIcon from '/arrow.svg';
+import { LangContext } from '../../App';
 
-function Sliders({ images, translations }) {
+import { images } from '../../constants/constants';
+
+function Sliders() {
+  
   const [active, setActive] = useState(0);
   const [direction, setDirection] = useState('');
   let touchStartX = null;
+
+  
+
+  const translations = useContext(LangContext)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -89,30 +97,32 @@ function Sliders({ images, translations }) {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
-      <div className="arrow arrow-left" onClick={moveLeft}>
-        <p className="fi-arrow-left">
-          <img src={arrowIcon} alt="arrow-icon" />
-        </p>
-      </div>
-      <TransitionGroup
-        className="slider__img-content"
-        childFactory={(child) =>
-          React.cloneElement(child, {
-            classNames: direction,
-          })
-        }
-      >
-        {generateItems()}
-      </TransitionGroup>
-      <div className="arrow arrow-right" onClick={moveRight}>
-        <p className="fi-arrow-right">
-          <img src={arrowIcon} alt="arrow-icon" />
-        </p>
-      </div>
-      <div className="dots">{renderDots()}</div>
-      <div className="slider-text t-hide">
-        <p>{translations.sliderText}</p>
-      </div>
+        <div className="arrow arrow-left" onClick={moveLeft}>
+          <p className="fi-arrow-left">
+            <img src={arrowIcon} alt="arrow-icon" />
+          </p>
+        </div>
+        <div className="slider__wrapper">
+          <TransitionGroup
+              className="slider__img-content"
+              childFactory={(child) =>
+                React.cloneElement(child, {
+                  classNames: direction,
+                })
+              }
+            >
+              {generateItems()}
+            </TransitionGroup>
+        </div>
+        <div className="arrow arrow-right" onClick={moveRight}>
+          <p className="fi-arrow-right">
+            <img src={arrowIcon} alt="arrow-icon" />
+          </p>
+        </div>
+        <div className="dots">{renderDots()}</div>
+        <div className="slider-text t-hide">
+          <p>{translations.sliderText}</p>
+        </div>
     </div>
   );
 }

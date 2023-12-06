@@ -1,0 +1,311 @@
+@import '../../variables.scss';
+
+
+.Contact {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+        left: 130px;
+        top: 215px;
+        margin: 100px;
+    }
+
+    &__title{
+        h2{
+            font-size: $h2_size;
+            line-height: $h2_height;
+        }
+    }
+
+    &__support {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    
+        & > a {
+            color: $dark_color;
+            text-decoration: none;
+            font-size: 18px;
+        
+            &:hover {
+                color: $red-1;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    &__block{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 120px;
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        h4 {
+            font-size: $subtitle_size;
+            line-height: $subtitle_height;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 55px;
+            width: 320px;
+            height: 40px;
+
+            .social-link {
+                display: flex;
+                align-items: center;
+                margin: 0;
+            }
+
+            .footer__social-img {
+                width: 40px;
+                height: 40px;
+                margin: 0;
+            }
+        }
+    }
+
+    &__location {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        gap: 32px;
+
+        h4 {
+            font-size: $subtitle_size;
+            line-height: $subtitle_height;
+        }
+        
+    }
+    
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 100px;
+        
+        span {
+            padding: 37px 38px;
+            gap: 204px;
+            border: 1px solid $basic-color_500;
+            background-color: $basic-color_500;
+        }
+        h3 {
+            color: $light_color;
+            font-style: normal;
+            font-size: 34px;
+            line-height: 60px;
+        }
+    
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $light_color;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+            border: 2px solid $basic-color_500;
+            color: $grey-1;
+        }
+    
+        a {
+            color: $dark_color;
+        } 
+    }
+    
+    &__red-text {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    &__joinTeam__join {
+        display: flex;
+
+        &-button-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            cursor: pointer;
+            font-size: $subtitle_size;
+            font-weight: bold;
+            line-height: $subtitle_size;
+            text-decoration: none;
+            padding: 18px 32px;
+    
+            &:hover {
+                color: $basic-color_500;
+                transition: 0.4s;
+            }
+    
+            &:active {
+                color: $basic-color_500;
+            }
+        
+            &:disabled {            
+                color: $grey-1;
+            }
+        }
+    }
+
+}
+
+
+//tablet
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .Contact {
+        gap: 46px;
+
+        &__content {
+            gap: 54px;
+            margin: 45px 0px 32px 0px;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &__support {
+            gap: 32px;
+        }
+
+        &__box {
+            padding: 0;
+            margin-bottom: 35px;
+
+            span {
+                gap: 16px;
+                padding: 24px 90px;
+            }
+    
+            h3 {
+                font-size: 36px;
+            }
+        }
+
+        &__red-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            align-items: center;
+        }
+    }
+    
+}
+
+//mobile
+
+@media screen and (max-width: 768px) {
+    .Contact {
+        padding: 0 20px;
+        gap: 46px;
+
+        &__content {
+            gap: 54px;
+            max-width: 100vw;
+            margin: 0;
+            margin: 32px;
+        }
+
+        &__title{
+            h2{
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+        &__support {
+            a  {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &__links {
+            width: 100%;
+
+            h4 {
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            ul{
+                width: 100%;
+                gap: 47px;
+
+                .footer__social-img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0;
+                }
+            }
+        }
+        &__location {
+            font-size: 18px;
+            line-height: 25px;
+
+            h4 {
+                font-size: 18px;
+                line-height: $subtitle_height;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+
+        &__box{
+            padding: 0;
+            margin-bottom: 35px;
+            
+            span {
+                gap: 16px;
+                padding: 12px 45px;
+            }
+    
+            h3 {
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+
+        &__red-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            align-items: center;
+        }
+
+        &__joinTeam__join {
+            &-button-link {
+                font-size: 18px;
+                line-height: 25px;
+                padding: 9px 16px;
+            }
+        }
+    }
+    
+}

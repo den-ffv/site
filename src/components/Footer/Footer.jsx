@@ -1,35 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logoUa from '../../assets/svg/logoUa.svg';
 import logoEn from '../../assets/svg/logoEn.svg';
-import telegram from '../../assets/svg/telegram.svg';
-import instagram from '../../assets/svg/instagram.svg';
-import tiktok from '../../assets/svg/tiktok.svg';
-import facebook from '../../assets/svg/facebook.svg';
 
 import './Footer.scss';
+import { LangContext } from '../../App';
+import { itemsSocialNetworks_Footer } from '../../constants/constants';
 
-function Footer({ translations }) {
-  const itemsSocialNetworks = [
-    {
-      id: 1,
-      icon: telegram,
-      alt: 'telegram',
-      href: 'https://t.me/Polit_Molod2023',
-    },
-    {
-      id: 2,
-      icon: instagram,
-      alt: 'instagram',
-      href: 'https://instagram.com/polit_molod?igshid=MzRlODBiNWFlZA==',
-    },
-    {
-      id: 3,
-      icon: tiktok,
-      alt: 'tiktok',
-      href: 'https://www.tiktok.com/@polit_molod?_t=8gRdrufMjRe&_r=1',
-    },
-    { id: 4, icon: facebook, alt: 'facebook', href: '/' },
-  ];
+function Footer() {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+
+  const translations = useContext(LangContext)
 
   return (
     <footer className="footer" data-aos="fade-up" data-aos-duration="1000">
@@ -90,6 +77,7 @@ function Footer({ translations }) {
                     <a
                       className="footer__content-link"
                       href={linkItemsFooterContact.href}
+                      onClick={scrollToTop}
                     >
                       {linkItemsFooterContact.value}
                     </a>
@@ -101,7 +89,7 @@ function Footer({ translations }) {
         </div>
         <div className="footer__wrapper">
           <div className="footer__social">
-            {itemsSocialNetworks.map((itemSM) => (
+            {itemsSocialNetworks_Footer.map((itemSM) => (
               <a
                 key={itemSM.id}
                 className="social-link"
@@ -120,12 +108,12 @@ function Footer({ translations }) {
 
           <div className="footer__mobile">
             <span>{translations.linkItemsFooterContactMobile}: </span>
-            <a href="tel:+380983803838">+380 98 380 38 38</a>
+            <a href="tel:+380973517753">+380 97 351 77 53</a>
           </div>
 
           <div className="footer__gmail">
             <span>{translations.linkItemsFooterContactEmail}: </span>
-            <a href="mailto:mdar_partiya@gmail.com">mdar_partiya.gmail</a>
+            <a href="mailto:Molodizkaudar@gmail.com">Molodizkaudar@gmail.com</a>
           </div>
         </div>
 

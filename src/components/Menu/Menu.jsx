@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Menu.scss';
 import logoUa from '../../assets/svg/logoUa.svg';
 import logoEn from '../../assets/svg/logoEn.svg';
+import { LangContext } from '../../App';
 
 const Menu = ({
   isOpen,
   setIsOpen,
-  translations,
   setCurrentLanguage,
   currentLanguage,
 }) => {
   const [menuActive, setMenuActive] = useState(false);
+
+  const translations = useContext(LangContext)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

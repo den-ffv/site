@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './SocialMedia.scss';
 import telegram from '../../assets/svg/telegram.svg';
 import instagram from '../../assets/svg/instagram.svg';
@@ -6,8 +6,12 @@ import tiktok from '../../assets/svg/tiktok.svg';
 import facebook from '../../assets/svg/facebook.svg';
 import iphone from '../../assets/png/iPhone.png';
 import macbook from '../../assets/png/macBook.png';
+import { LangContext } from '../../App';
 
-function SocialMedia({ translations }) {
+function SocialMedia() {
+
+  const translations = useContext(LangContext)
+
   return (
     <section className="socialMedia" id="socialMedia-anchor">
       <div className="socialMedia__wrapper">
