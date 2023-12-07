@@ -59,7 +59,7 @@ const englishTranslations = {
     'We have no restrictions on social status, faith or origin. We are open to cooperation with anyone who wants to contribute to changes in our society. Together we can do more!',
 
   // LeaderParty section
-  leaderPartyTitle: 'Leader of the youth party «YDAR»',
+  leaderPartyTitle: 'Leader of the youth of the "UDAR" party',
   leaderPartyName: 'Damir Rakhmatullin',
   leaderPartyСitation:
     '"Young people are a force that can change the world. Their energy and independence are the key to tomorrow."',
