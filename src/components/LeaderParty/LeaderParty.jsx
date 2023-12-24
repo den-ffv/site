@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './LeaderParty.scss';
 
-import leader from '../../assets/png/leader.png';
+import leader from '../../assets/png/leader.avif';
 import instagram from '../../assets/svg/instagram.svg';
 import { LangContext } from '../../App';
 
