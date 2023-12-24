@@ -25,9 +25,9 @@ function Footer() {
           <a href="/" className="footer__logo">
             { localStorage.getItem('language') === 'ua' ? (
 
-              <img src={logoUa} alt="logo" />
+              <img src={logoUa} alt="logo" loading='lazy' />
             ) : (
-              <img src={logoEn} alt="logo" />
+              <img src={logoEn} alt="logo" loading='lazy' />
             )}
           </a>
 
@@ -101,6 +101,7 @@ function Footer() {
                   className="footer__social-img"
                   src={itemSM.icon}
                   alt={itemSM.alt}
+                  loading='lazy'
                 />
               </a>
             ))}

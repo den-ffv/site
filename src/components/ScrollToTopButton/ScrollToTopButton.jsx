@@ -57,7 +57,7 @@ function ScrollToTopButton() {
     <div className="scroll-to-top" ref={scrollToTopButtonRef}>
       {isVisible && (
         <button onClick={scrollToTop}>
-          <img src={arrow} className="scroll-arrow" alt="arrow" />
+          <img src={arrow} className="scroll-arrow" alt="arrow" loading='eager'/>
         </button>
       )}
     </div>

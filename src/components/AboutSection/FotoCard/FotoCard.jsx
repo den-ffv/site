@@ -5,11 +5,10 @@ import './FotoCard.scss';
 
 function FotoCard({ numberOfComponents, rotateClass, image }) {
 
-
   return (
     <div className={`foto-card ${numberOfComponents > 1 ? rotateClass : ''}`}>
       <div className="foto-card__content">
-        <img className="foto-card__img" src={`/foto${image}`} alt="foto" />
+        <img className="foto-card__img" src={`${image}`} alt="foto" loading='lazy' />
       </div>
     </div>
   );

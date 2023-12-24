@@ -32,6 +32,7 @@ function JoinToTeam() {
             data-aos-duration="1000"
             src={forms}
             alt="forms"
+            loading='lazy'
           />
           <p className="joinTeam__content-subtitle m-hide t-hide">
             {translations.joinTeamTitle}

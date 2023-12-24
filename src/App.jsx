@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {lazy,Suspense , useContext, useEffect, useState } from 'react';
 
 import englishTranslations from './constants/language/englishTranslations';
 import ukrainianTranslations from './constants/language/ukrainianTranslations';
 
-import Footer from './components/Footer/Footer';
+const Footer = lazy(() => import('./components/Footer/Footer'));
 import Header from './components/Header/Header';
 import Sliders from './components/Slider/Slider';
 import Title from './components/Title/Title';
@@ -14,9 +14,9 @@ import SocialMedia from './components/SocialMedia/SocialMedia';
 import LeaderParty from './components/LeaderParty/LeaderParty';
 import InitialBlockSection from './components/InitialBlockSection/InitialBlockSection';
 import AboutSection from './components/AboutSection/AboutSection';
-import Policy from './components/Policy/Policy';
-import NotFound from './components/NotFound/NotFound';
-import Contact from './components/Contact/Contact';
+const Policy = lazy(() => import('./components/Policy/Policy'));
+const NotFound = lazy(() => import('./components/NotFound/NotFound'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
 import { dataAboutSectionFunc } from './constants/constants';
 
 export const LangContext = React.createContext();

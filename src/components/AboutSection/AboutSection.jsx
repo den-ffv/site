@@ -32,7 +32,7 @@ function AboutSection({revers, mainCard, numberOfComponents, textInComponentAbou
       {mainCard ? <BigFotoCatd translations={translations} /> : <div className='about-section__foto-container' style={{height: numberOfComponents > 1 ? 450: 'auto'} }>{fotoCardComponents}</div>}
       <div className="about-section__text-content">
 
-        <img className="about-section__icon" src={icon} alt="icon" />
+        <img className="about-section__icon" src={icon} alt="icon" loading='lazy'/>
         <p className="about-section__text">
           {textInComponentAbout}
         </p>

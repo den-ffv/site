@@ -1,7 +1,7 @@
-import icon1 from '/icon/icon.svg';
-import icon2 from '/icon/icon2.svg';
-import icon3 from '/icon/icon3.svg';
-import icon4 from '/icon/icon4.svg';
+import icon1 from '../assets/svg/icon/icon.svg';
+import icon2 from '../assets/svg/icon/icon2.svg';
+import icon3 from '../assets/svg/icon/icon3.svg';
+import icon4 from '../assets/svg/icon/icon4.svg';
 
 
 import telegram from '../assets/svg/telegram.svg';
@@ -15,12 +15,13 @@ import tiktok_red from '../assets/svg/tik-tok-red.svg';
 import facebook_red from '../assets/svg/facebook-red.svg';
 
 export const images = [
-    '/IMG_5.png',
-    '/IMG_2.png',
-    '/IMG_3.png',
-    '/IMG_4.png',
-    '/IMG_1.png',
+    '../src/assets/png/foto/IMG_5.png',
+    '../src/assets/png/foto/IMG_2.png',
+    '../src/assets/png/foto/IMG_3.png',
+    '../src/assets/png/foto/IMG_4.png',
+    '../src/assets/png/foto/IMG_1.png',
 ];
+
 export const dataAboutSectionFunc = (translations) => {
     
     return [
@@ -31,7 +32,7 @@ export const dataAboutSectionFunc = (translations) => {
             numOfCompon: 1,
             text: translations.aboutText1,
             icon: icon1,
-            image: [{ id: 1, img: '/foto_1.png' }],
+            image: [{ id: 1, img: '../src/assets/png/foto/foto_1.png' }],
         },
         {
             id: 2,
@@ -41,9 +42,9 @@ export const dataAboutSectionFunc = (translations) => {
             text: translations.aboutText2,
             icon: icon2,
             image: [
-                { id: 2, img: '/foto_4.png' },
-                { id: 3, img: '/foto_5.png' },
-                { id: 4, img: '/foto_2.png' },
+                { id: 2, img: '../src/assets/png/foto/foto_4.png' },
+                { id: 3, img: '../src/assets/png/foto/foto_5.png' },
+                { id: 4, img: '../src/assets/png/foto/foto_2.png' },
             ],
         },
         {
@@ -53,7 +54,7 @@ export const dataAboutSectionFunc = (translations) => {
             numOfCompon: 1,
             text: translations.aboutText3,
             icon: icon3,
-            image: [{ id: 5, img: '/foto_3.png' }],
+            image: [{ id: 5, img: '../src/assets/png/foto/foto_3.png' }],
         },
         {
             id: 4,
@@ -62,7 +63,7 @@ export const dataAboutSectionFunc = (translations) => {
             numOfCompon: 1,
             text: translations.aboutText4,
             icon: icon4,
-            image: [{ id: 6, img: '/foto_6.png' }],
+            image: [{ id: 6, img: '../src/assets/png/foto/foto_6.png' }],
         },
     ]
 } 

@@ -47,9 +47,9 @@ function Header({ currentLanguage, setCurrentLanguage }) {
           <div className="header__logo" data-aos="zoom-in">
             <a href="/">
               {localStorage.getItem('language') === 'ua' ? (
-                <img src={logoUa} alt="logo" />
+                <img src={logoUa} alt="logo" loading='eager' />
               ) : (
-                <img src={logoEn} alt="logo" />
+                <img src={logoEn} alt="logo" loading='eager'/>
               )}
             </a>
           </div>

@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 
 import './InitialBlockSection.scss';
 
-import InitialBlockIcon from '/InitialBlockIcon.svg';
+import InitialBlockIcon from '../../assets/svg/icon/InitialBlockIcon.svg';
+// import InitialBlockIcon from '../../assets/png/InitialBlockIcon.png';
+
 import { LangContext } from '../../App';
 
 function InitialBlockSection() {
@@ -46,6 +48,7 @@ function InitialBlockSection() {
           data-aos-duration="2000"
           src={InitialBlockIcon}
           alt="initial-block-icon"
+          loading='eager'
         />
       </div>
     </div>

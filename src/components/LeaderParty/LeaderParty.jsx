@@ -22,6 +22,7 @@ function LeaderParty() {
                 src={leader}
                 data-aos="fade-up" data-aos-duration="1000"
                 alt="Damir"
+                loading='lazy'
               />
             </div>
             <div

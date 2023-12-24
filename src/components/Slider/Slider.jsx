@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { TransitionGroup } from 'react-transition-group';
 import './Slider.scss';
 import SliderItem from '../SliderItem/SliderItem';
-import arrowIcon from '/arrow.svg';
+import arrowIcon from '../../assets/svg/icon/arrow.svg';
 import { LangContext } from '../../App';
 
 import { images } from '../../constants/constants';

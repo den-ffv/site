@@ -35,7 +35,7 @@ function Policy() {
             <br />
             {translations.policyTextMain_8}
             &nbsp;
-            <a className='policy__text-link' target='_blank' href='https://zakon.rada.gov.ua/laws/show/2297-17#Text' >{translations.policyTextMain_9}</a>
+            <a className='policy__text-link' rel='noreferrer' target='_blank' href='https://zakon.rada.gov.ua/laws/show/2297-17#Text' >{translations.policyTextMain_9}</a>
           </span>
           <span data-aos='zoom-out-up'>
             <b>{translations.policyTextMain_10}</b>
